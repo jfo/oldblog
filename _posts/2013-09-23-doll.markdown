@@ -1,0 +1,17 @@
+---
+layout: post
+status: publish
+published: true
+title: Doll
+author: Jeff
+author_login: jeffowler
+author_email: jeffowler@gmail.com
+wordpress_id: 660
+wordpress_url: http://www.jeffalanfowler.com/blog/?p=660
+date: 2013-09-23 22:06:17.000000000 -04:00
+categories:
+- Music
+tags: []
+comments: []
+---
+[audio mp3="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/09/doll.mp3"][/audio]

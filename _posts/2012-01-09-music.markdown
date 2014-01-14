@@ -1,0 +1,31 @@
+---
+layout: page
+status: publish
+published: true
+title: Music
+author: Jeff
+author_login: jeffowler
+author_email: jeffowler@gmail.com
+wordpress_id: 138
+wordpress_url: http://www.jeffalanfowler.com/?page_id=138
+date: 2012-01-09 07:22:58.000000000 -05:00
+categories: []
+tags: []
+comments: []
+---
+<p style="text-align: left;">This page contains links to past projects that I have completed or have been fortunate enough to be involved in.</p>
+<p style="text-align: left;">This first track is a rough mix off of my forthcoming album: "all that isn't singing," recorded in late 2011 with Evan Crane (bass), John Doing (Drums), and Kelly Ash (Voice).</p>
+<p style="text-align: center;"><span style="color: #3366ff;"><a href="http://www.jeffalanfowler.com/wp-content/uploads/2012/01/02-How-Deep-is-the-Ocean1.mp3"><span style="color: #3366ff;">::How Deep is the Ocean</span></a>::</span></p>
+<p style="text-align: center;"><span style="text-decoration: underline;">
+</span></p>
+<p style="text-align: left;">With <a href="http://www.emanuelandthefear.com/" target="_blank">Emanuel and the Fear</a> in 2010, that's me in that hat. I've since retired it- the hat that is.</p>
+<p style="text-align: left;"><iframe style="position: relative; display: block; width: 400px; height: 100px;" src="http://bandcamp.com/EmbeddedPlayer/v=2/track=3172434252/size=venti/bgcol=FFFFFF/linkcol=4285BB/" height="100" width="400" frameborder="0"></iframe></p>
+<p style="text-align: left;">[embed]http://www.youtube.com/watch?v=MqaFVq4JQg8[/embed]</p>
+<p style="text-align: left;">Upon return from Japan (2009), my first completely solo project...</p>
+<p style="text-align: left;"><iframe style="position: relative; display: block; width: 300px; height: 410px;" src="http://bandcamp.com/EmbeddedPlayer/v=2/album=1978494107/size=grande3/bgcol=FFFFFF/linkcol=4285BB/" height="410" width="300" frameborder="0"></iframe></p>
+<p style="text-align: center;"><span style="text-decoration: underline;"><strong>Before 2005</strong>:</span></p>
+<p style="text-align: left;">Upon leaving North Carolina, electronic pop with the inimitable <a href="http://erichirsh.com/" target="_blank">Eric Hirsh.</a>..</p>
+<p style="text-align: left;"><iframe src="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbumSocialPreview?id=73242524&amp;s=143441&amp;uo=4&amp;wdId=32800" height="500" width="500" frameborder="0" scrolling="no"></iframe></p>
+<p style="text-align: center;"><span style="text-decoration: underline;"><strong>2004</strong>:</span></p>
+<p style="text-align: left;">Funk with the best band name I've ever had...</p>
+<p style="text-align: center;"><iframe src="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewAlbumSocialPreview?id=47612655&amp;s=143441&amp;uo=4&amp;wdId=32800" height="500" width="500" frameborder="0" scrolling="no"></iframe></p>

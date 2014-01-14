@@ -1,0 +1,41 @@
+---
+layout: safecss
+status: publish
+published: true
+title: safecss
+author: Jeff
+author_login: jeffowler
+author_email: jeffowler@gmail.com
+excerpt: Empty Canvas
+wordpress_id: 416
+wordpress_url: http://www.jeffalanfowler.com/blog/?safecss=safecss
+date: 2013-09-09 22:58:56.000000000 -04:00
+categories: []
+tags: []
+comments: []
+---
+/*
+Welcome to Custom CSS!
+
+CSS (Cascading Style Sheets) is a kind of code that tells the browser how
+to render a web page. You may delete these comments and get started with
+your customizations.
+
+By default, your stylesheet will be loaded after the theme stylesheets,
+which means that your rules can take precedence and override the theme CSS
+rules. Just write here what you want to change, you don't need to copy all
+your theme's stylesheet content.
+*/
+#sidebar h3 {
+	text-decoration: underline;
+}
+
+#sidebar {
+	font-size: 90%;
+}
+
+#sidebar img {
+	width: 160px;
+	padding: 3px;
+	float: center;
+}

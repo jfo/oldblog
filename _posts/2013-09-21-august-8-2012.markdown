@@ -1,0 +1,17 @@
+---
+layout: post
+status: publish
+published: true
+title: August 8, 2012
+author: Jeff
+author_login: jeffowler
+author_email: jeffowler@gmail.com
+wordpress_id: 589
+wordpress_url: http://www.jeffalanfowler.com/blog/?p=589
+date: 2013-09-21 20:18:18.000000000 -04:00
+categories:
+- Music
+tags: []
+comments: []
+---
+[audio mp3="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/09/lost.mp3"][/audio]

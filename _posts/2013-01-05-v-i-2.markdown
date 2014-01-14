@@ -1,0 +1,17 @@
+---
+layout: post
+status: publish
+published: true
+title: V-I
+author: Jeff
+author_login: jeffowler
+author_email: jeffowler@gmail.com
+wordpress_id: 323
+wordpress_url: http://www.jeffalanfowler.com/?p=323
+date: 2013-01-05 03:07:16.000000000 -05:00
+categories:
+- Uncategorized
+tags: []
+comments: []
+---
+<div style="margin: 0 0 10px 0; padding: 0; font-size: 0.8em; line-height: 1.6em;"><a href="http://www.flickr.com/photos/monkeywithamirror/8349136416/" title="V-I"><img src="http://farm9.staticflickr.com/8053/8349136416_1310dd17b5.jpg" alt="V-I by a monkey with a mirror" /></a><br/><span style="margin: 0;"><a href="http://www.flickr.com/photos/monkeywithamirror/8349136416/">V-I</a>, a photo by <a href="http://www.flickr.com/photos/monkeywithamirror/">a monkey with a mirror</a> on Flickr.</span></div><p>This year's resolution.</p>
