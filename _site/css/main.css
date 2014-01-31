@@ -14,9 +14,9 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
+  font: 13.34px Helvetica;
   font-size: small;
-  text-align: center;
+  /* text-align: center; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,12 +55,26 @@ a:visited { color: #a0a; }
 /*
 /*****************************************************************************/
 
+.sidebar {
+  width: 10em;
+  float: left;
+  margin: 1em 1em 2em 3em;
+}
+
+.sidebar img {
+  width: 10em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
 .site {
   font-size: 115%;
   text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
+  width: 40em;
+  margin: 1em auto 2em auto;
   line-height: 1.5em;
+  /* float: left; */
 }
 
 .header a {

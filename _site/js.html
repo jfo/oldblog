@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>js</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="sidebar">
+          <img src="http://www.gravatar.com/avatar/78359dd9d3cf59abacfa85565edc1eb2?s=150" />
+          <img src="/images/compex.svg" />
+          <img src="/images/cam.svg" />
+          <img src="/images/guitar.svg"  />
+        </div>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">jaf.io</a></h1>
+            <a class="extra" href="/">home</a>
+          </div>
+
+              <script type="text/javascript">
+      var intervalTicks = 100;
+      var redValue = 1;
+      var greenValue = 1;
+      var blueValue = 1;
+      var colorChangeMagnitude = 1.01;
+      var backgroundColor = "rgb("+redValue+","+greenValue+","+blueValue+")";
+      var redFlag = "down";
+      var greenFlag = "up";
+      var blueFlag; "up";
+      window.onload = function()
+      {
+        initColors();
+        setInterval(changeBgColor, intervalTicks);
+      }
+
+      function initColors() {
+        redValue = Math.floor(Math.random() * 255);
+        greenValue = Math.floor(Math.random() * 255);
+        blueValue = Math.floor(Math.random() * 255);
+        changeBgColor();
+      }
+
+      function changeBgColor(){
+        if(redValue < 100)
+          redFlag = "up";
+        if(redValue > 200)
+          redFlag = "down";
+        if(redFlag == "up")
+          redValue *= colorChangeMagnitude;
+        if(redFlag == "down")
+          redValue /= colorChangeMagnitude;
+
+        if(greenValue < 100)
+          greenFlag = "up";
+        if(greenValue > 200)
+          greenFlag = "down";
+        if(greenFlag == "up")
+          greenValue *= colorChangeMagnitude;
+        if(greenFlag == "down")
+          greenValue /= colorChangeMagnitude;
+
+
+        if(blueValue < 100)
+          blueFlag = "up";
+        if(blueValue > 200)
+          blueFlag = "down";
+        if(blueFlag == "up")
+          blueValue *= colorChangeMagnitude;
+        if(blueFlag == "down")
+          blueValue /= colorChangeMagnitude;
+        backgroundColor = "rgb("+Math.floor(redValue)+","+Math.floor(greenValue)+","+Math.floor(blueValue)+")";
+        document.body.style.background=backgroundColor;
+      }
+    </script>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                you@example.com
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/yourusername">github.com/jaf</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/jeffowler</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>
