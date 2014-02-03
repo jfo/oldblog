@@ -37,7 +37,7 @@
 <!-- using the split filter -->
 
    <div class="post-preview">
-   <h2><a href="/jekyll/update/2014/01/13/welcome-to-jekyll.html">Welcome to Jekyll!</a></h2>
+   <h2 class="post-title"><a href="/jekyll/update/2014/01/13/welcome-to-jekyll.html">Welcome to Jekyll!</a></h2>
    <span class="post-date">January 13, 2014</span>
    <p>You&#39;ll find this post in your <code>_posts</code> directory - edit this post and re-build (or run with the <code>-w</code> switch) to see your changes!
 To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention: YYYY-MM-DD-name-of-post.ext.</p>
@@ -55,10 +55,12 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
 
    
    </div>
-   <hr>
+   <p>need to add some empty lines here?</p>
+   <p></p>
+   <p></p>
 
    <div class="post-preview">
-   <h2><a href="/uncategorized/2013/11/18/some-more-tracks-from-jordans-and-my-duo.html">Some more tracks from Jordan's and my duo</a></h2>
+   <h2 class="post-title"><a href="/uncategorized/2013/11/18/some-more-tracks-from-jordans-and-my-duo.html">Some more tracks from Jordan's and my duo</a></h2>
    <span class="post-date">November 18, 2013</span>
    <p>Jordan and I played another duo gig last weekend... here are some tracks.</p>
 
@@ -79,10 +81,12 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
 
    
    </div>
-   <hr>
+   <p>need to add some empty lines here?</p>
+   <p></p>
+   <p></p>
 
    <div class="post-preview">
-   <h2><a href="/programming/2013/11/12/rubyks-the-solver-methods.html">Rubyks, the solver methods</a></h2>
+   <h2 class="post-title"><a href="/programming/2013/11/12/rubyks-the-solver-methods.html">Rubyks, the solver methods</a></h2>
    <span class="post-date">November 12, 2013</span>
    <p>&nbsp;
 <p style="text-align: center;"><img class="aligncenter" alt="" src="http://communities.ptc.com/servlet/JiveServlet/showImage/2-172419-27077/puzzles_rubiks_cube-13771.jpg" width="400" height="268" /></p>
@@ -194,10 +198,12 @@ Note that it always checks to see if the cube is ALREADY solved before mucking i
 
    
    </div>
-   <hr>
+   <p>need to add some empty lines here?</p>
+   <p></p>
+   <p></p>
 
    <div class="post-preview">
-   <h2><a href="/programming/2013/11/12/rubyks-a-gem.html">Rubyks, a gem</a></h2>
+   <h2 class="post-title"><a href="/programming/2013/11/12/rubyks-a-gem.html">Rubyks, a gem</a></h2>
    <span class="post-date">November 12, 2013</span>
    <p style="text-align: center;"><img class="aligncenter" alt="" src="http://www.memphisflyer.com/binary/db6e/1351792080-rubiks-cube-original.jpg" width="252" height="252" /></p>
 
@@ -282,10 +288,12 @@ Simple- just reassigning all the colors based on how the cube is moving. Notice 
 
    
    </div>
-   <hr>
+   <p>need to add some empty lines here?</p>
+   <p></p>
+   <p></p>
 
    <div class="post-preview">
-   <h2><a href="/programming/2013/11/12/derple-derp-the-hot-new-social-network.html">Derple Derp: the hot new social network</a></h2>
+   <h2 class="post-title"><a href="/programming/2013/11/12/derple-derp-the-hot-new-social-network.html">Derple Derp: the hot new social network</a></h2>
    <span class="post-date">November 12, 2013</span>
    <p>Have you heard of Derple Derp? It&#39;s the hottest new thing to hit the social networking scene.</p>
 
@@ -307,496 +315,9 @@ Simple- just reassigning all the colors based on how the cube is moving. Notice 
 
    
    </div>
-   <hr>
-
-   <div class="post-preview">
-   <h2><a href="/programming/2013/10/07/fizzbuzz-in-brainfuck-part-3.html">fizzbuzz in brainfuck, part 3</a></h2>
-   <span class="post-date">October 07, 2013</span>
-   <p style="text-align: center;"><a href="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/10/brainfuck.jpg"><img class="aligncenter  wp-image-749" alt="brainfuck" src="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/10/brainfuck.jpg" width="288" height="288" /></a></p>
-
-<p style="text-align: left;">Alright. I have a memory array loaded with the information I need to get going, and I have a program blueprint that I should be able to implement. I only need to be able to use if/else and if. I looked up some algorithms to use for this bit, and these are the ones I settled on:<a id="more"></a><a id="more-706"></a></p>
-
-<p style="text-align: left;">If ...</p>
-
-<blockquote>
-<pre>temp0[-]
-temp1[-]
-x[temp0+temp1+x-]temp0[x+temp0-]+
-temp1[temp0-temp1[-]]
-temp0[
-<strong> 
-<i>  code</i>
-
-</strong>temp0-]</pre>
-</blockquote>
-
-<p>and If/Else...
-<blockquote>
-<pre>temp0[-]+
-temp1[-]
-x[
-<strong>   <i>code1</i></strong></p>
-
-<p>temp0-
-x[temp1+x-]
-]
-temp1[x+temp1-]
-temp0[
-<strong><br>
-<i>    code2
-</i></strong>
-temp0]</pre>
-</blockquote>
-Note that the inline &quot;variable&quot; names are actually describing whatever location that cell happens to be. When we get to the final code, those plain text names will be appended with the pointer motions necessary to arrive at them. Both of these algorithms were lifted from <a href="http://esolangs.org/wiki/brainfuck_algorithms" target="_blank">here</a>. For every cell I want to evaluate, I need two more cells to hold temporary information. This is why I left two empty cells next to each multiples counter in the last post, and it is also why I&#39;ll need to slap a couple more empty cells onto the beginning of the whole program when we get around to putting in the final &quot;Buzz&quot; block that needs to be nested into the &quot;Fizz&quot; block. But notice! There is already a problem here... for If/Else, this algorithm runs the first block IF the cell it&#39;s evaluating is &quot;TRUE&quot; (meaning it&#39;s holding a value other than 0). For our &quot;Fizz&quot; and &quot;Buzz&quot; statements, we want them to run if the value of the cell is &quot;0&quot;. Sad Trombone. But it&#39;s an easy fix, of course! We just have to invert all the code we had <a title="fizzbuzz in brainfuck, part one" href="http://www.jeffalanfowler.com/blog/fizzbuzz-in-brainfuck-part-one/" target="_blank">before</a>. Just keep that in mind. Lets write the inverted program in psuedo-code and then fill it all in with the specifics...
-<blockquote>
-<pre>number = 0 </p>
-
-<p>until number == 100 do
-  if number % 3 != 0
-    if number % 5 != 0
-      print number
-    else
-      print &quot;Buzz&quot;
-    end</p>
-
-<p>else
-    print &quot;Fizz&quot;</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">if number % 5 == 0
-  print &quot;Buzz&quot;
-end
-</code></pre></div>
-<p>end
-puts
-number += 1
-end</pre>
-</blockquote>
-Keep in mind that we&#39;ve taken care of all the variable assignments and memory allocation in the last post, so this really is all we have left. I&#39;ll upcase the &quot;rubyish&quot; lines and fill in the brainfuck underneath them.
-<blockquote>open hundreds loop
-&lt;&lt;&lt;[&gt;&gt;&gt;
-open tens loop
-&lt;&lt;[&gt;&gt;
-open ones loop
-&lt;[&gt;</p>
-
-<p>IF NUMBER % 3 != 0
-if cell1 == true
-&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
-&gt;temp0[-]+
-&gt;temp1[-]
-&lt;&lt;x[</p>
-
-<p>IF NUMBER % 5 != 0
-&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
-&lt;&lt;&lt;&lt;&lt;&lt;
-&gt;temp0[-]
-&gt;temp1[-]
-&lt;&lt;x[&gt;temp0+&gt;temp1+&lt;&lt;x-]&gt;temp0[&lt;x+&gt;temp0-]
-&gt;temp1[
-&gt;&gt;&gt;&gt;
-print current number
-.&gt;.&gt;.&gt;.&lt;&lt;&lt;
-&lt;&lt;&lt;&lt;
-temp1[-]]
-&gt;&gt;&gt;&gt;
-&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
-
-<p>ELSIF NUMBER % 3 == 0
-elsif cell1 == false
-&gt;temp0-
-&lt;x[&gt;&gt;temp1+&lt;&lt;x-]</p>
-
-<p>]</p>
-
-<p>PRINT FIZZ
-&gt;&gt;temp1[&lt;&lt;x+&gt;&gt;temp1-]
-&lt;temp0[
-&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</p>
-
-<p>.
-&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
-.&gt;.&gt;&gt;&gt;..&lt;&lt;&lt;&lt;
-&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
-
-<p>IF NUMBER % 5 == 0
-&lt;&lt;&lt;&lt;&lt;&lt;
-&gt;temp0[-]
-&gt;temp1[-]
-&lt;&lt;x[&gt;temp0+&gt;temp1+&lt;&lt;x-]&gt;temp0[&lt;x+&gt;temp0-]+
-&gt;temp1[&lt;temp0-&gt;temp1[-]]
-&lt;temp0[&gt;&gt;&gt;&gt;&gt;</p>
-
-<p>PRINT BUZZ
-&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
-&gt;&gt;.&gt;.&gt;..&lt;&lt;&lt;&lt;
-&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
-
-<p>&lt;&lt;&lt;&lt;&lt;
-temp0-]
-&gt;&gt;&gt;&gt;&gt;</p>
-
-<p>cell 1 = 3
-&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;+++&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</p>
-
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
-temp0-]
-&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</p>
-
-<p>ELSIF NUMBER % 5 == 0
-&lt;&lt;&lt;&lt;&lt;&lt;
-&gt;temp0[-]+
-&gt;temp1[-]
-&lt;&lt;x[&gt;temp0-&lt;x[&gt;&gt;temp1+&lt;&lt;x-]]
-&gt;&gt;temp1[&lt;&lt;x+&gt;&gt;temp1-]
-&lt;temp0[
-&lt;+++++&gt;</p>
-
-<p>PRINT BUZZ
-&gt;&gt;&gt;&gt;&gt;
-.
-&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
-&gt;&gt;&gt;&gt;&gt;
-&gt;&gt;.&gt;.&gt;..&lt;&lt;&lt;&lt;
-&lt;&lt;&lt;&lt;&lt;
-&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
-&lt;&lt;&lt;&lt;&lt;
-temp0-]
-&gt;&gt;&gt;&gt;&gt;</p>
-
-<p>increment ones place
-&gt;&gt;&gt;+&lt;&lt;&lt;
-decrement 3s counter
-&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
-decrement 5s counter
-&lt;&lt;&lt;&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;&gt;
-Decrement ones counter
-&lt;-]</p>
-
-<p>reset ones counter
-+++++ +++++
-rest ones place to 0
-&gt;&gt;&gt;&gt; ----- -----
-increment 10s place
-&lt;+&lt;&lt;</p>
-
-<p>decrement 10s counter
-&lt;&lt;-]</p>
-
-<p>reset tens counter to
-+++++ +++++ &gt;&gt;&gt;&gt; ----- -----
-&lt;+&lt;
-&lt;&lt;&lt;-]</p>
-
-<p>PRINT BUZZ FOR 100
-&gt;&gt;&gt;.
-&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
-&gt;.&gt;.&gt;..</blockquote>
-So, that&#39;s basically that. This is super hard to read, because of the crazy syntax and how unreadable brainfuck is, but maybe having it parsed out so much will help some peeps understand it better. I sure learned a hell of a lot about memory allocation, pointers, and logic gates. All in all, now that I have a couple of weeks between it and me, it was worth the time.</p>
-
-<p>Oh yeah, of course you can see the <a href="http://replit.com/Kr0/3" target="_blank">whole annotated program here</a>. This is EXACTLY the same code as the giant block of bf symbols I put in the <a title="fizzbuzz in brainfuck, part one" href="http://www.jeffalanfowler.com/blog/fizzbuzz-in-brainfuck-part-one/" target="_blank">first part</a>, just spread out with indentation etc.</p>
-
-<p>Next time in the brainfuck series: <a href="https://github.com/urthbound/esoteric/blob/master/brainfuckint.rb" target="_blank">writing a compiler / interpreter for brainfuck in ruby. </a> Sometime. But don&#39;t hold your breath. All you brainfuck fans out there. In Ukraine. Don&#39;t think I don&#39;t see your ip&#39;s.</p>
-
-<p>Oh and just to wrap this up: it feels pretty good to say that I am never going to write another fizzbuzz again; FizzBuzz is officially checked of the bucket list.</p>
-
-<p>Goodnight and goodluck, interwebs.</p>
-
-<p>&nbsp;</p>
-
-   
-   </div>
-   <hr>
-
-   <div class="post-preview">
-   <h2><a href="/music/programming/jazz/2013/10/06/the-chorder-prototype.html">"The Chorder" prototype</a></h2>
-   <span class="post-date">October 06, 2013</span>
-   <p style="text-align: center;"><a href="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/10/Screen-Shot-2013-10-06-at-4.53.52-PM.png">
-<img class=" wp-image-728 aligncenter" alt="Screen Shot 2013-10-06 at 4.53.52 PM" src="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/10/Screen-Shot-2013-10-06-at-4.53.52-PM.png" width="578" height="434" /></a></p>
-
-<p>&nbsp;</p>
-
-<p>I wrote this program a few months ago. It&#39;s visually minimal, but it can generate over a thousand valid chord shapes. I wrote it in Ruby and wrapped it in <a href="http://shoesrb.com/" target="_blank">Shoes</a>. Instead of prettifying the above format, I decided to refactor the whole project and build it into a web app, while extending it&#39;s functionality to include Drop 3, Drop 2/3, and Drop 2/4 voicings and inversions. That&#39;s in the pipes.</p>
-
-<p>I&#39;m  planning to use this as a base from which to write a program that can output properly voice-led arrangements of any jazz tune by reading charts from the <a href="http://musiccog.ohio-state.edu/home/index.php/iRb_Jazz_Corpus" target="_blank">iRb Jazz Corpus</a>, which I&#39;m making good progress with but will elaborate on in a future post.</p>
-
-<p>If you&#39;d like to run this version, you can<a href="http://shoesrb.com/downloads.html" target="_blank"> download the shoes interpreter here</a> and the <a href="http://jeffalanfowler.com/drop/shoeschorder.rb" target="_blank">GUI source code here </a> and open the latter in the former. If you&#39;re command-line savvy, you could also <a href="https://github.com/urthbound/chorder" target="_blank">clone the github repo</a> and run a terminal interface via &quot;$ruby interface.rb&quot; that accesses the same logic.</p>
-
-<p>The left hand side has five main groups of buttons:
-<ul>
-    <li>root note</li>
-    <li>accidental</li>
-    <li>chord quality</li>
-    <li>inversion</li>
-    <li>string set</li>
-</ul>
-The program will also accommodate open strings and notes that fall above the 12th fret.</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-   
-   </div>
-   <hr>
-
-   <div class="post-preview">
-   <h2><a href="/programming/2013/09/24/fizzbuzz-in-brainfuck-part-two.html">fizzbuzz in brainfuck, part two</a></h2>
-   <span class="post-date">September 24, 2013</span>
-   <p style="text-align: center;"><a href="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/09/Screenshot.png"><img class="size-full wp-image-536 aligncenter" alt="Screenshot" src="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/09/Screenshot.png" width="200" height="200" /></a></p>
-
-<p>Last time, <a title="fizzbuzz in brainfuck, part one" href="http://www.jeffalanfowler.com/blog/fizzbuzz-in-brainfuck-part-one/">this</a>! This time I&#39;ll translate the first half of the &quot;Ruby&quot; code into brainfuck. Oh the anticipation!
-<p style="text-align: center;">***</p>
-<p style="text-align: center;"><a id="more"></a><a id="more-655"></a></p>
-Because every bf interpreter initializes with a completely clean memory slate, we have to set the memory cells we are going to use before we do anything else. I approximated this in Ruby by using variables to stand in for the memory slots and simply assigning them the value necessary. This time, we have to do it manually, and incrementally, but there&#39;s no trick at all to it, just remembering where we are, really. I&#39;ll kind of do this in the order I did it last time, too.
-<blockquote>first we go to cell 7 to start
-&gt;&gt;&gt;&gt;&gt;&gt;
-and increment it to the hundreds counter
-+
-same for cell 8; the tens counter
-&gt;++++++++++
-and cell 9 for the ones counter
-&gt;++++++++++</blockquote>
-Now the printing cells... cell 10 gets a newline character, which in ascii code is the byte value &quot;10&quot; in decimal (or 0000 1010 in binary).
-<blockquote>&gt;++++++++++</blockquote>
-Cells 11, 12, and 13 are assigned to the hundreds, tens, and ones printing places respectively. They have to be initialized to 0, but there&#39;s a little trick to it. Remember, we don&#39;t want the byte value to be 0, we want to byte value to be &quot;0&quot;, which is a string that prints the character for zero, not the byte value for zero itself. All three of these cells, then, need the byte value &quot;48,&quot; which is the ascii code for the STRING &quot;0&quot;.
-<blockquote>to 11 hold hundreds place &quot;0&quot;
-&gt;&gt;
-+++++ +++++ +++++ +++++
-+++++ +++++ +++++ +++++
-+++++ +++</p>
-
-<p>to 12 hold tens place &quot;0&quot;
-&gt;
-+++++ +++++ +++++ +++++
-+++++ +++++ +++++ +++++
-+++++ +++</p>
-
-<p>to 13 hold ones place &quot;0&quot;
-&gt;
-+++++ +++++ +++++ +++++
-+++++ +++++ +++++ +++++
-+++++ +++</blockquote>
-Now we initialize a few cells to ascii values for the letters we will need to print &quot;Fizz&quot; and &quot;Buzz&quot; and &quot;FizzBuzz.&quot; Turns out we only need 5: &quot;FizBu&quot;. I chose to move the pointer all the way to cell 25 to do this one, both so that I would have more space to work with if I needed it for anything else, and more importantly so that I could visually keep track of where my pointer generally was in the program. When I saw a long string of &gt;&#39;s I had an idea of where it all was. So cells 25-29 spell &quot;FizBu&quot;:</p>
-
-<p>Oh, and for all of these I&#39;m using cell 30 as a counter cell to iterate through the incrementer loops. Not so many &quot;++++++++++&quot; etc that way...
-<blockquote>Move to cell 25:
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; &gt;&gt;&gt;&gt;&gt;</p>
-
-<p>Set 25 to &quot;F&quot; (ascii key &quot;70&quot;)
-&gt;&gt;&gt;&gt;&gt;+++++ ++[&lt;&lt;&lt;&lt;&lt;+++++ +++++&gt;&gt;&gt;&gt;&gt;-]</p>
-
-<p>Set 26 to &quot;i&quot; (ascii key &quot;105&quot;)
-+++++ +++++ +[&lt;&lt;&lt;&lt;+++++ +++++&gt;&gt;&gt;&gt;-]&lt;&lt;&lt;-----&gt;&gt;&gt;</p>
-
-<p>Set 27 to &quot;z&quot; (ascii key &quot;122&quot;)
-+++++ +++++ ++[&lt;&lt;&lt;+++++ +++++&gt;&gt;&gt;-]&lt;&lt;++&gt;&gt;</p>
-
-<p>Set 28 to &quot;B&quot; (ascii key &quot;66&quot;)
-+++++ ++[&lt;&lt;+++++ +++++&gt;&gt;-]&lt;----&gt;</p>
-
-<p>Set 29 to &quot;u&quot; (ascii key &quot;117&quot;)
-+++++ +++++ ++[&lt;+++++ +++++&gt;-]&lt;---</p>
-
-<p>Move back to cell 25
-&lt;&lt;&lt;&lt;</p>
-
-<p>Move back to cell 10 to begin program
-&lt;&lt;&lt;&lt;&lt; &lt;&lt;&lt;&lt;&lt; &lt;&lt;&lt;&lt;&lt;</blockquote>
-Incidentally- I used cell 10 as my &quot;Home Base&quot; for all of this. After any operation I would reset the pointer back to cell 10 so I had a pretty good idea of where I was. This was super inefficient from a computing standpoint, resulting in a lot of wasted pointer motions, but carpe diem.</p>
-
-<p>Oh!... only one more thing we need to do, and that is to prepare the 3 and 5 multiples finder to 3 and 5, respectively! I put those in cells 1 (for the 3&#39;s counter) and 4 (for the 5&#39;s counter) because each of them needs two helper cells for all the logic we&#39;re going to futz with later on.
-<blockquote>&lt;&lt;&lt;&lt;&lt;&lt;
-+++++
-&lt;&lt;&lt;
-+++
-&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</blockquote>
-We&#39;ve set everything up and our &quot;workspace&quot;, so to speak, is ready to go...
-<blockquote>3 0 0 5 0 0 1 10 10 [10] 48 48 48 0 0 0 0 0 0 0 0 70 105 122 66 117 0</blockquote>
-<a href="http://youtu.be/Q5im0Ssyyus" target="_blank">This link</a> will eventually point to the REPL for the above code so you can look at the memory space yourself, but the save function on that web app seems to be broken right now, so until then it will point to a picture of a unicorn or something... I haven&#39;t decided yet.</p>
-
-<p>Also, spoiler alert. At this point when I was setting everything up, I had forgotten to allocate temp cells for the logic of the innermost &quot;if&quot; block that prints &quot;Buzz&quot; after &quot;Fizz&quot;, so I&#39;ll have to add a couple more slots when I get to that bit. The logic part is what I&#39;m really looking forward to trying to explain, because it all makes sense to me but in a pretty jumbled up way so far...</p>
-
-<p>That concludes <a href="http://www.youtube.com/watch?v=QIL-nwJfGgg" target="_blank">the first half of this basketball game</a>, which is a thing that Chuck Mangione says right before starting to play that track on a live album I had in high school. You should totally click through to the video and let the soothing sounds of well orchestrated, innocuous, proto easy listening jazz drizzle into your ears like honey and cream while riding a bike in a park or petting a dog or something.
-<p style="text-align: center;">***</p></p>
-
-   
-   </div>
-   <hr>
-
-   <div class="post-preview">
-   <h2><a href="/music/2013/09/24/doll.html">Doll</a></h2>
-   <span class="post-date">September 24, 2013</span>
-   <p>[audio mp3=&quot;http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/09/doll.mp3&quot;][/audio]</p>
-
-   
-   </div>
-   <hr>
-
-   <div class="post-preview">
-   <h2><a href="/programming/2013/09/22/fizzbuzz-in-brainfuck-part-one.html">fizzbuzz in brainfuck, part one</a></h2>
-   <span class="post-date">September 22, 2013</span>
-   <blockquote><pre>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;+&gt;+&gt;+++&gt;&gt;&gt;+++++&gt;&gt;&gt;+&gt;++++++++++&gt;++++++++++&gt;++++++++++&gt;++++++++++++++++++++++++++++++++++++++++++++++++&gt;++++++++++++++++++++++++++++++++++++++++++++++++&gt;++++++++++++++++++++++++++++++++++++++++++++++++&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;+++++++[&lt;&lt;&lt;&lt;&lt;++++++++++&gt;&gt;&gt;&gt;&gt;-]+++++++++++[&lt;&lt;&lt;&lt;++++++++++&gt;&gt;&gt;&gt;-]&lt;&lt;&lt;&lt;-----&gt;&gt;&gt;&gt;+++++++[&lt;&lt;&lt;++++++++++&gt;&gt;&gt;-]&lt;&lt;&lt;----&gt;&gt;&gt;++++++++++++[&lt;&lt;++++++++++&gt;&gt;-]&lt;&lt;---&gt;&gt;++++++++++++[&lt;++++++++++&gt;-]&lt;++&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;[&gt;&gt;&gt;&lt;&lt;[&gt;&gt;&lt;[&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;[-]+&gt;[-]&lt;&lt;[&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;[-]&gt;[-]&lt;&lt;[&gt;+&gt;+&lt;&lt;-]&gt;[&lt;+&gt;-]&gt;[&gt;&gt;&gt;&gt;.&gt;.&gt;.&gt;.&lt;&lt;&lt;&lt;&lt;&lt;&lt;[-]]&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;-&lt;[&gt;&gt;+&lt;&lt;-]]&gt;&gt;[&lt;&lt;+&gt;&gt;-]&lt;[&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;.&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;.&gt;.&gt;&gt;&gt;..&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;[-]&gt;[-]&lt;&lt;[&gt;+&gt;+&lt;&lt;-]&gt;[&lt;+&gt;-]+&gt;[&lt;-&gt;[-]]&lt;[&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;.&gt;.&gt;..&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;[-]&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;-]&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;+++&lt;++++++++++[-]+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;-]&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;[-]+&gt;[-]&lt;&lt;[&gt;-&lt;[&gt;&gt;+&lt;&lt;-]]&gt;&gt;[&lt;&lt;+&gt;&gt;-]&lt;[&lt;+++++&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;[&lt;[&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;.&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;.&gt;.&gt;..&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;-]+&gt;-]+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;-]&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;-&gt;&gt;&gt;&gt;&gt;&gt;&lt;-]++++++++++&gt;&gt;&gt;&gt;----------&lt;+&lt;&lt;&lt;&lt;-]++++++++++&gt;&gt;&gt;&gt;----------&lt;+&lt;&lt;&lt;&lt;-]&gt;&gt;&gt;.&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;.&gt;.&gt;..&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</pre></blockquote>
-
-<p><span>(</span><a href="http://replit.com/Kr0/1" target="_blank">Run that junk.</a><span>)</span></p>
-
-<p>A couple of weeks ago I got it into my pointy little egg-head that I wanted to write a <a href="http://www.codinghorror.com/blog/2007/02/fizzbuzz-the-programmers-stairway-to-heaven.html" target="_blank">fizzbuzz</a> in <a href="http://www.jeffalanfowler.com/blog/how-brainfuck-works/" target="_blank">brainfuck</a>. As with a lot of the stupid ideas that occur to me, I initially dismissed it as a waste of time, as-well-I-had-ought-to-have-done.</p>
-
-<p>&quot;Nahhhhhhh,&quot; past me said to himself, chuckling, &quot;that would be totally, needlessly hard right now, and it would take a lot of time, and anyway I don&#39;t know how I would even START! Unless, maybe, well... I wonder if I could write an if/else... and then if I could do that...maybe with a multiples counter cell...and....&quot;</p>
-
-<p>And so <a href="http://esolangs.org/wiki/brainfuck_algorithms" target="_blank">after a quick googling</a>, I was off. I basically <a href="http://xkcd.com/356/">nerd-sniped</a> myself.
-<p style="text-align: center;">***</p>
-<p style="text-align: center;"><a id="more"></a><a id="more-595"></a></p>
-<p style="text-align: left;">I decided the easiest way to go about it was to write fizzbuzz in Ruby, first, and then translate it into brainfuck. Aww Ruby, <a href="http://replit.com/Kr2/1" target="_blank">you so pretty with your little modulos and all that ish.</a> But of course I couldn&#39;t use anything more complicated than an if/else statement, and I had to do everything incrementally by 1, as well... and I could only stop loops by allowing their index counter to reach zero, not when it got to a certain high number like 100... hmmmmmm.</p>
-<p style="text-align: left;">It looks a little unwieldy, but I used numbers spelled out as variable names to stand for the address of the memory cell that I would eventually use in brainfuck. The variables could only be set to numbers, and until loops can only be set to terminate at zero. I started by writing a program that simply counts to 100 without any of the divisor logic.</p>
-<p style="text-align: left;">First I needed to mark how high I was going to count. We&#39;re going to 100, so I need a 1 in the hundreds loop counter, a 10 in the tens loop counter, and a 10 in the ones loop counter to start with:</p></p>
-
-<blockquote>seven = 1
-eight = 10
-nine = 10</blockquote>
-Those are the indices; they are going to be going down. Now I need the memory slots holding the actual numerals that are going to be printed... including one slot that holds a new line character I can access so not everything comes out all smashed together, because I can't use <code>puts</code>:
-<blockquote>ten = "/n"
-eleven = 0
-twelve = 0
-thirteen = 0</blockquote>
-Now I'll just create some nested loops to do the counting (up in the printed slots' case and down in the index slots' case):
-<blockquote>
-<pre>until seven == 0
-    until eight == 0
-        until nine == 0
-            print ten       #prints the newline
-            print eleven    #prints the hundreds place
-            print twelve    #prints the tens place
-            print thirteen  #prints the ones place
-
-            nine -= 1       #decrements the ones index slot
-            thirteen += 1   #increments the ones print slot
-        end
-
-        nine = 10           #resets the ones place index slot
-        eight -=1           #decrements the tens place index slot
-
-        twelve += 1         #increments the tens place print slot
-        thirteen = 0        #resets the ones place print slot
-    end
-
-  eight = 10                  #resets the tens place index slot
-  seven -= 1                  #decrements the hundreds place index slot
-
-  eleven += 1                 #increments the hundreds place print slot
-  twelve = 0                  #resets the tens place print slot
-end</pre>
-</blockquote>
-
-<p><a href="http://replit.com/Kr7" target="_blank">Okay- still Ruby... ugly, non-Rubyish Ruby, but now it is nothing I can&#39;t do in brainfuck. </a></p>
-
-<p>But we haven&#39;t done the hard part yet- implementing the logic that will filter out the multiples of 3 and 5 and replace them with &quot;Fizz&quot; and &quot;Buzz.&quot; In Ruby or any other higher level language, this program practically writes itself with a <a href="http://en.wikipedia.org/wiki/Modulo_operation" target="_blank">modulo operation</a>, which returns zero if a number is evenly divisible by another number and leaves no remainder. But brainfuck, of course, doesn&#39;t have this operation, and remember- it&#39;s conditional loops can only be triggered by a &quot;0&quot; in the memory slot that is being evaluated, anyway.</p>
-
-<p>This one took a little bit of thought, but a solution was forthcoming. I add two more index cells:
-<blockquote>
-<pre>five = 3
-six = 5</pre>
-</blockquote>
-and decrement both of those each time I print a number out- when the &quot;3&quot; index slot reaches zero, I know I have found a multiple of 3 and can use that spot to trigger the code to print &quot;Fizz&quot; (and to reset the index back to 3- or rather 2 actually, since that accounts for the<a href="http://en.wikipedia.org/wiki/Off-by-one_error" target="_blank"> ol&#39; off by one</a>) instead of the code to print the number. Ditto for &quot;Buzz.&quot;</p>
-
-<p><a href="http://replit.com/Kr9/1" target="_blank">Here is what all this looks like... </a>now, before printing the number, the program checks to see if it is a multiple of three or five...only when it is not  divisible by either does it print the number itself.</p>
-
-<p>This totally works! But there are some issues- I can&#39;t use elsifs in brainfuck- the algorithms I&#39;ve researched aren&#39;t that sophisticated, and I haven&#39;t implemented &quot;FizzBuzz&quot; for the numbers that are multiples of both- the logic catches them on &quot;Fizz&quot; and skips over the other bits. Also there is some needless repetition with the newlines, though I&#39;m actually going to need some of that later on so I&#39;ll leave it for now.</p>
-
-<p>Ok so I can&#39;t use elsifs to evaluate mutliple possible states... but I CAN do that evaluation in series. I need it to think the following, which I have decided to draw a flow chart for because it is late and I want to play with photoshop for a minute...</p>
-
-<p><a href="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/09/bffb.bmp"><img class="wp-image-640 alignnone" alt="bffb" src="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/09/bffb.bmp" width="480" height="480" /></a>
-God, that&#39;s butt-ugly. I almost didn&#39;t put it up, it&#39;s so ugly. Whatever, you get the idea. It&#39;s two nested if/else statements. I can deal with those<a href="http://replit.com/Kr9/2" target="_blank">! Now it looks like this.</a></p>
-
-<p>Aside from the repetition we are ignoring- there are three problems left. Still no &quot;FizzBuzz,&quot; and when it should make &quot;FizzBuzz,&quot; it throws off the 5&#39;s counter into negative numbers so it never prints Buzz after 15. And it&#39;s not evaluating 100. The first and second problem can be fixed with just one more &quot;if&quot; statement, nuzzled way down in the bowels of our<a href="http://en.wikipedia.org/wiki/Spaghetti_code" target="_blank"> increasingly italian </a>program. We know we&#39;ll only have to write &quot;FizzBuzz&quot; if we&#39;ve already written &quot;Fizz,&quot; so anytime we print &quot;Fizz,&quot; we just throw in an extra check against whether or not we need to write &quot;Buzz.&quot; Now, if we write &quot;FizzBuzz&quot;, we will also be resetting the 5&#39;s counter.</p>
-
-<p>Oh and as for the last problem, I just hardcoded printing &quot;Buzz&quot; out at the end instead of &quot;100&quot;, bypassing all the logic, because I&#39;m a filthy, cheating, dirty fraud. YOLO####33<a href="http://knowyourmeme.com/memes/the-1-phenomenon" target="_blank">3</a>. Also because it will always end up on a multiple of 100, so at least the &quot;Buzz&quot; part will be right. Screw you, 300, 600, and 900!!</p>
-
-<p>Click here to run all this crap ----&gt;   <a href="http://replit.com/Kr9/4" target="_blank">TAH-DAH! </a>
-<blockquote>
-<pre>five = 3
-six = 5</p>
-
-<p>seven = 1
-eight = 10
-nine = 10</p>
-
-<p>ten = &quot;\n&quot;
-eleven = 0
-twelve = 0
-thirteen = 0</p>
-
-<p>until seven == 0
-    until eight == 0
-        until nine == 0</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">        if five == 0
-
-            print ten      #don&#39;t forget the newline!
-            print &quot;Fizz&quot;
-
-            if six == 0
-                print &quot;Buzz&quot;
-                six = 5
-            end
-
-            five = 2
-            six -= 1
-            nine -= 1       #decrements the ones index slot
-            thirteen += 1   #increments the ones print slot
-
-        else
-
-            if six == 0
-
-                print ten
-                print &quot;Buzz&quot;
-                six = 4
-                five -= 1
-                nine -= 1       #decrements the ones index slot
-                thirteen += 1   #increments the ones print slot
-
-            else
-
-                print ten       #prints the newline
-                print eleven    #prints the hundreds place
-                print twelve    #prints the tens place
-                print thirteen  #prints the ones place
-
-                nine -= 1       #decrements the ones index slot
-                thirteen += 1   #increments the ones print slot
-
-                five -= 1       #decrements the multiple of 3 tracker
-                six -= 1        #decrements the multiple of 5 tracker
-            end
-        end    
-    end
-
-    nine = 10           #resets the ones place index slot
-    eight -=1           #decrements the tens place index slot
-
-    twelve += 1         #increments the tens place print slot
-    thirteen = 0        #resets the ones place print slot
-end
-</code></pre></div>
-<p>eight = 10                  #resets the tens place index slot
-seven -= 1                  #decrements the hundreds place index slot</p>
-
-<p>eleven += 1                 #increments the hundreds place print slot
-twelve = 0                  #resets the tens place print slot
-end</p>
-
-<h1>since the above loop is set to terminate at the top after it reaches 100, that</h1>
-
-<h1>final number won&#39;t get printed. I&#39;ll print it below:</h1>
-
-<p>print ten
-print &quot;Buzz&quot; #dirty cheater.</pre>
-</blockquote>
-So I&#39;ve written the whole program in a way that brainfuck can accommodate. The next step is to translate it. Bleep, bloop, bleep! I&#39;m going to write that in a separate post, because this is getting pretty long. Also if you want to increase the maximum number that you&#39;re evaluating, try changing the initial index of the hundreds place in the above code! It will go for as long as you want it to, because it will just continue to print higher numbers because it is Ruby! brainfuck wouldn&#39;t be able to do that past 999, because we would need to implement a new loop to print the thousands place, because it is printing strings of digits instead of numbers. We&#39;ll get to that next time.</p>
-
-<p><a href="https://www.google.com/search?q=cats&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ei=1Kk-UsXeBYq88wSZi4CABg&amp;ved=0CAkQ_AUoAQ&amp;biw=1916&amp;bih=919&amp;dpr=1#imgdii=_" target="_blank">If you got this far, you deserve this.</a> Come back soon!</p>
-
-   
-   </div>
-   <hr>
+   <p>need to add some empty lines here?</p>
+   <p></p>
+   <p></p>
 
 
 <!-- <ul > -->
