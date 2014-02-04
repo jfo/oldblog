@@ -78,17 +78,15 @@ a:visited { color: #a0a; }
   margin: 1em 6em 0em 5em;
 }
 
+.blur {
+  -webkit-filter: blur(4px);
+  transition: 0.2s;
+}
+
 .sidebar img {
   width: 12em;
   margin-left: auto;
   margin-right: auto;
-  -webkit-filter: blur(4px);
-  transition: 0.2s;
-
-  /* -moz-filter: blur(2px); */
-  /* -o-filter: blur(2px); */
-  /* -ms-filter: blur(2px); */
-  /* filter: blur(2px); */
 }
 
 .site {

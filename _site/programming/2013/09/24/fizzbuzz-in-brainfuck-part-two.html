@@ -22,10 +22,10 @@
     <body>
 
         <div class="sidebar">
-          <a href="about.html"> <img class="sideimg" src="http://www.gravatar.com/avatar/78359dd9d3cf59abacfa85565edc1eb2?s=150" /></a>
-          <a href="/"> <img class="sideimg" src="/images/compex.svg"/></a>
-          <a href="music.html"> <img class="sideimg" src="/images/guitar.svg"/></a>
-          <a href="photo.html"> <img class="sideimg" src="/images/cam.svg"/></a>
+          <a href="about.html"> <img class="blur about" src="http://www.gravatar.com/avatar/78359dd9d3cf59abacfa85565edc1eb2?s=150" /></a>
+          <a href="/"> <img class="blur index" src="/images/compex.svg"/></a>
+          <a href="music.html"> <img class="blur music" src="/images/guitar.svg"/></a>
+          <a href="photo.html"> <img class="blur photo" src="/images/cam.svg"/></a>
         </div>
 
         <div class="site">
@@ -135,6 +135,15 @@ We&#39;ve set everything up and our &quot;workspace&quot;, so to speak, is ready
 
       <script>
 
+        if (window.location.pathname=='/')
+          var thing = 'index';
+        else
+          var thing = window.location.pathname.match(/(\w+).html/)[1];
+
+
+        $('.' + thing).removeClass('blur')
+
+
         function unblur() {
           $(this).css( "-webkit-filter", "blur(0px)" );
         };
@@ -143,7 +152,7 @@ We&#39;ve set everything up and our &quot;workspace&quot;, so to speak, is ready
           $(this).css( "-webkit-filter", "blur(4px)" );
         };
 
-        $( "img.sideimg" ).hover(unblur, blur);
+        $( "img.blur" ).hover(unblur, blur);
 
       </script>
     </body>
