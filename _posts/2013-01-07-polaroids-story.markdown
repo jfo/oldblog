@@ -31,8 +31,6 @@ Well, Mara, they're mine, from a series I did last year futzing with old polaroi
 
 That was last year around this time, or a little later, in a burst of uncharacteristically fretless output, that I'd like to get to more often, pun intended and I mean both ways this is a poorly written sentence.
 
-&nbsp;
-
 Mostly I pressed the chemicals around in there using a wacom stylus and a flat edge on a salt shaker. I've always been rotten at drawing, but this was mostly abstract enough for me to do it. I really loved the effect so I made about 60 of them, although the vast majority are, shall we say, aesthetically inferior *ahemcrapahem*... but enough turned out to make it worth the time.
 
 There is also something rattling around in my brain about being open to inspiration from unconventional media, like when my microwave hums a closed position major seventh chord, which is really weird cause it only does that when I put vegetarian gyoza in there... go figure...

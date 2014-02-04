@@ -24,6 +24,3 @@ I always feel like if music hadn't snatched my nerd up, I would have ended up a 
 
 (I've always wished I could find that page, again, but since that is impossible, <span style="color: #0000ff;"><a href="/misc/index.html" target="_blank"><span style="color: #0000ff;">I've recreated it here</span></a></span>. Shut up, whatever, I was thirteen.)
 
-&nbsp;
-
-&nbsp;

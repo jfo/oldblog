@@ -6,31 +6,19 @@ title: jaf
 <div id="home">
 
 <!-- using the split filter -->
-{% for post in site.posts limit:50 %}
+{% for post in site.posts limit:1 %}
    <div class="post-preview">
    <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-   <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+   <hr>
+   <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
    {{ post.content | split:'<!--break-->' | first }}
    {% if post.content contains '<!--break-->' %}
       <a href="{{ post.url }}">read more</a>
    {% endif %}
    </div>
-   <p>need to add some empty lines here?</p>
-   <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-   <p></p>
+   <BR>&nbsp;<BR>
+   <center>&bull;&bull;&bull;</center>
+   <BR>&nbsp;<BR>
+   <BR>&nbsp;<BR>
 {% endfor %}
 
-<!-- <ul > -->
-<!--     {% for post in site.posts limit 2 %} -->
-<!--     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li> -->
-<!--         {{ post.content | strip_html | truncatewords:75}}<br> -->
-<!--             <a href="{{ post.url }}">Read more...</a><br><br> -->
-<!--     {% endfor %} -->
-<!-- </ul> -->
-
-<!--   <ul class="posts"> -->
-<!--     {% for post in site.posts %} -->
-<!--       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li> -->
-<!--     {% endfor %} -->
-<!--   </ul> -->
-<!-- </div> -->

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
       <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <link href='http://fonts.googleapis.com/css?family=Carme' rel='stylesheet' type='text/css'>
 
 
         <meta charset="utf-8">
@@ -26,6 +28,9 @@
           <a href="/"> <img class="blur index" src="/images/compex.svg"/></a>
           <a href="music.html"> <img class="blur music" src="/images/guitar.svg"/></a>
           <a href="photo.html"> <img class="blur photo" src="/images/cam.svg"/></a>
+
+        {% render_archives site  %}
+
         </div>
 
         <div class="site">
@@ -63,16 +68,15 @@
 
 
         function unblur() {
-          $(this).css( "-webkit-filter", "blur(0px)" );
+          $(this).removeClass('blur');
         };
 
         function blur() {
-          $(this).css( "-webkit-filter", "blur(4px)" );
+          $(this).addClass('blur');
         };
 
         $( "img.blur" ).hover(unblur, blur);
 
       </script>
     </body>
-
 </html>
