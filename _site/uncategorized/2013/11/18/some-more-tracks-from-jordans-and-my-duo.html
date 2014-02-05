@@ -11,8 +11,6 @@
         <title>Some more tracks from Jordan's and my duo</title>
         <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
 
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -20,17 +18,49 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
 
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntaxsol.css">
+
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script language="Javascript" type="text/javascript">
+
+  google.load("search", "1");
+
+  function OnLoad() {
+    // Create a search control
+    var searchControl = new google.search.SearchControl();
+
+    // Add in a WebSearch
+    var webSearch = new google.search.WebSearch();
+
+    // Restrict our search to pages from this site
+    webSearch.setSiteRestriction('/');
+
+    // Add the searcher to the SearchControl
+    searchControl.addSearcher(webSearch);
+
+    // tell the searcher to draw itself and tell it where to attach
+    searchControl.draw(document.getElementById("search"));
+  }
+  google.setOnLoadCallback(OnLoad);
+
+</script>
+
+
     </head>
     <body>
 
         <div class="sidebar">
-          <a href="about.html"> <img class="blur about" src="http://www.gravatar.com/avatar/78359dd9d3cf59abacfa85565edc1eb2?s=150" /></a>
+          <a href="/about.html"> <img class="blur about" src="http://www.gravatar.com/avatar/78359dd9d3cf59abacfa85565edc1eb2?s=150" /></a>
           <a href="/"> <img class="blur index" src="/images/compex.svg"/></a>
-          <a href="music.html"> <img class="blur music" src="/images/guitar.svg"/></a>
-          <a href="photo.html"> <img class="blur photo" src="/images/cam.svg"/></a>
+          <a href="/music.html"> <img class="blur music" src="/images/guitar.svg"/></a>
+          <a href="/photo.html"> <img class="blur photo" src="/images/cam.svg"/></a>
+       <div id="search">djf</div>
 
-        <div class='archive_year'>2014</div><div class='archive_month'>January</div><ul><li class='archive_title'><span class='archive_day'>13</span> <a href='/jekyll/update/2014/01/13/welcome-to-jekyll.html'>Welcome to Jekyll!</a></li></ul><div class='archive_year'>2013</div><div class='archive_month'>November</div><ul><li class='archive_title'><span class='archive_day'>18</span> <a href='/uncategorized/2013/11/18/some-more-tracks-from-jordans-and-my-duo.html'>Some more tracks from Jordan's and my duo</a></li></ul><ul><li class='archive_title'><span class='archive_day'>12</span> <a href='/programming/2013/11/12/rubyks-the-solver-methods.html'>Rubyks, the solver methods</a></li></ul><ul><li class='archive_title'><span class='archive_day'>12</span> <a href='/programming/2013/11/12/rubyks-a-gem.html'>Rubyks, a gem</a></li></ul><ul><li class='archive_title'><span class='archive_day'>12</span> <a href='/programming/2013/11/12/derple-derp-the-hot-new-social-network.html'>Derple Derp: the hot new social network</a></li></ul><div class='archive_month'>October</div><ul><li class='archive_title'><span class='archive_day'>7</span> <a href='/programming/2013/10/07/fizzbuzz-in-brainfuck-part-3.html'>fizzbuzz in brainfuck, part 3</a></li></ul><ul><li class='archive_title'><span class='archive_day'>6</span> <a href='/music/programming/jazz/2013/10/06/the-chorder-prototype.html'>"The Chorder" prototype</a></li></ul><div class='archive_month'>September</div><ul><li class='archive_title'><span class='archive_day'>24</span> <a href='/programming/2013/09/24/fizzbuzz-in-brainfuck-part-two.html'>fizzbuzz in brainfuck, part two</a></li></ul><ul><li class='archive_title'><span class='archive_day'>24</span> <a href='/music/2013/09/24/doll.html'>Doll</a></li></ul><ul><li class='archive_title'><span class='archive_day'>22</span> <a href='/programming/2013/09/22/fizzbuzz-in-brainfuck-part-one.html'>fizzbuzz in brainfuck, part one</a></li></ul><ul><li class='archive_title'><span class='archive_day'>22</span> <a href='/music/2013/09/22/august-8-2012.html'>August 8, 2012</a></li></ul><ul><li class='archive_title'><span class='archive_day'>20</span> <a href='/programming/2013/09/20/the-story-so-far.html'>The story so far</a></li></ul><ul><li class='archive_title'><span class='archive_day'>19</span> <a href='/music/2013/09/19/jason-saltiels-wait-until-the-night.html'>Jason Saltiel's "Wait Until the Night"</a></li></ul><ul><li class='archive_title'><span class='archive_day'>17</span> <a href='/music/songs/videos/2013/09/17/the-tower-of-learning.html'>The Tower of Learning</a></li></ul><ul><li class='archive_title'><span class='archive_day'>14</span> <a href='/uncategorized/2013/09/14/top-5000.html'>Top 5000</a></li></ul><ul><li class='archive_title'><span class='archive_day'>13</span> <a href='/programming/2013/09/13/how-brainfuck-works.html'>How brainfuck works</a></li></ul><ul><li class='archive_title'><span class='archive_day'>12</span> <a href='/music/songs/2013/09/12/ill-come-back-someday.html'>I'll Come Back Someday</a></li></ul><ul><li class='archive_title'><span class='archive_day'>11</span> <a href='/music/jazz/2013/09/11/a-couple-more-track-from-that-duo-gig-with-jordan.html'>A couple more tracks from that duo gig with Jordan</a></li></ul><ul><li class='archive_title'><span class='archive_day'>10</span> <a href='/music/jazz/2013/09/10/days-of-wine-and-roses.html'>Days of Wine and Roses</a></li></ul><div class='archive_month'>July</div><ul><li class='archive_title'><span class='archive_day'>26</span> <a href='/music/derp/2013/07/26/portishead-tribute-live-at-roseland-live-at-le-poisson-rouge.html'>Portishead tribute "Live at Roseland" live at Le Poisson Rouge</a></li></ul><ul><li class='archive_title'><span class='archive_day'>23</span> <a href='/music/2013/07/23/new-posts.html'>New Posts</a></li></ul><div class='archive_month'>January</div><ul><li class='archive_title'><span class='archive_day'>7</span> <a href='/photography/2013/01/07/polaroids-story.html'>Polaroids Story</a></li></ul><ul><li class='archive_title'><span class='archive_day'>6</span> <a href='/uncategorized/2013/01/06/the-post-i-am-not-writing-this-time.html'>The first post that I'm not going to write...</a></li></ul><ul><li class='archive_title'><span class='archive_day'>5</span> <a href='/uncategorized/2013/01/05/v-i-2.html'>V-I</a></li></ul>
-
+       <div class='archive_year'>2014</div><ul class='list'><li><hr><a>January</a><ul><li class='archive_title'><span class='archive_day'>13</span> <a href='/jekyll/update/2014/01/13/welcome-to-jekyll.html'>Welcome to Jekyll!</a></ul></li></ul></ul><div class='archive_year'>2013</div><ul class='list'><li><hr><a>November</a><ul><li class='archive_title'><span class='archive_day'>18</span> <a href='/uncategorized/2013/11/18/some-more-tracks-from-jordans-and-my-duo.html'>Some more tracks from Jordan's and my duo</a></ul><ul><li class='archive_title'><span class='archive_day'>12</span> <a href='/programming/2013/11/12/rubyks-the-solver-methods.html'>Rubyks, the solver methods</a></ul><ul><li class='archive_title'><span class='archive_day'>12</span> <a href='/programming/2013/11/12/rubyks-a-gem.html'>Rubyks, a gem</a></ul><ul><li class='archive_title'><span class='archive_day'>12</span> <a href='/programming/2013/11/12/derple-derp-the-hot-new-social-network.html'>Derple Derp: the hot new social network</a></ul></li></ul><ul class='list'><li><hr><a>October</a><ul><li class='archive_title'><span class='archive_day'>7</span> <a href='/programming/2013/10/07/fizzbuzz-in-brainfuck-part-3.html'>fizzbuzz in brainfuck, part 3</a></ul><ul><li class='archive_title'><span class='archive_day'>6</span> <a href='/music/programming/jazz/2013/10/06/the-chorder-prototype.html'>"The Chorder" prototype</a></ul></li></ul><ul class='list'><li><hr><a>September</a><ul><li class='archive_title'><span class='archive_day'>24</span> <a href='/programming/2013/09/24/fizzbuzz-in-brainfuck-part-two.html'>fizzbuzz in brainfuck, part two</a></ul><ul><li class='archive_title'><span class='archive_day'>24</span> <a href='/music/2013/09/24/doll.html'>Doll</a></ul><ul><li class='archive_title'><span class='archive_day'>22</span> <a href='/programming/2013/09/22/fizzbuzz-in-brainfuck-part-one.html'>fizzbuzz in brainfuck, part one</a></ul><ul><li class='archive_title'><span class='archive_day'>22</span> <a href='/music/2013/09/22/august-8-2012.html'>August 8, 2012</a></ul><ul><li class='archive_title'><span class='archive_day'>20</span> <a href='/programming/2013/09/20/the-story-so-far.html'>The story so far</a></ul><ul><li class='archive_title'><span class='archive_day'>19</span> <a href='/music/2013/09/19/jason-saltiels-wait-until-the-night.html'>Jason Saltiel's "Wait Until the Night"</a></ul><ul><li class='archive_title'><span class='archive_day'>17</span> <a href='/music/songs/videos/2013/09/17/the-tower-of-learning.html'>The Tower of Learning</a></ul><ul><li class='archive_title'><span class='archive_day'>14</span> <a href='/uncategorized/2013/09/14/top-5000.html'>Top 5000</a></ul><ul><li class='archive_title'><span class='archive_day'>13</span> <a href='/programming/2013/09/13/how-brainfuck-works.html'>How brainfuck works</a></ul><ul><li class='archive_title'><span class='archive_day'>12</span> <a href='/music/songs/2013/09/12/ill-come-back-someday.html'>I'll Come Back Someday</a></ul><ul><li class='archive_title'><span class='archive_day'>11</span> <a href='/music/jazz/2013/09/11/a-couple-more-track-from-that-duo-gig-with-jordan.html'>A couple more tracks from that duo gig with Jordan</a></ul><ul><li class='archive_title'><span class='archive_day'>10</span> <a href='/music/jazz/2013/09/10/days-of-wine-and-roses.html'>Days of Wine and Roses</a></ul></li></ul></ul><ul class='list'><li><hr><a>July</a><ul><li class='archive_title'><span class='archive_day'>26</span> <a href='/music/derp/2013/07/26/portishead-tribute-live-at-roseland-live-at-le-poisson-rouge.html'>Portishead tribute "Live at Roseland" live at Le Poisson Rouge</a></ul><ul><li class='archive_title'><span class='archive_day'>23</span> <a href='/music/2013/07/23/new-posts.html'>New Posts</a></ul></li></ul></ul></ul></ul></ul></ul><ul class='list'><li><hr><a>January</a><ul><li class='archive_title'><span class='archive_day'>7</span> <a href='/photography/2013/01/07/polaroids-story.html'>Polaroids Story</a></ul><ul><li class='archive_title'><span class='archive_day'>6</span> <a href='/uncategorized/2013/01/06/the-post-i-am-not-writing-this-time.html'>The first post that I'm not going to write...</a></ul><ul><li class='archive_title'><span class='archive_day'>5</span> <a href='/uncategorized/2013/01/05/v-i-2.html'>V-I</a></ul></li></ul></ul>
+       <BR>&nbsp;<BR>
+       <BR>&nbsp;<BR>
+       <BR>&nbsp;<BR>
         </div>
 
         <div class="site">
@@ -86,19 +116,22 @@
         else
           var thing = window.location.pathname.match(/(\w+).html/)[1];
 
-
         $('.' + thing).removeClass('blur')
-
-
         function unblur() {
           $(this).removeClass('blur');
         };
-
         function blur() {
           $(this).addClass('blur');
         };
-
         $( "img.blur" ).hover(unblur, blur);
+
+        $('.list > li a').click(function() {
+              $(this).parent().find('ul').toggle();
+            });
+
+        jQuery("pre code").html(function(index, html) {
+            return html.replace(/^(.*)$/mg, "<span class=\"line\">$1</span>")
+        });
 
       </script>
     </body>

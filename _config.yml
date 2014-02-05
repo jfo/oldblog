@@ -1,4 +1,4 @@
 name: jaf.io
-markdown: redcarpet
+markdown: redcarpet-pygments
 pygments: true
 pagination: 5

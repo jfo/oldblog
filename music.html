@@ -1,6 +1,27 @@
 ---
-layout: default 
-title: about 
+layout: default
+title: about
 ---
 
-This is where the stuff about me MUSIC goes derp derp derp
+<div class='youtube-frame'>
+<iframe id = "ever" width="640" height="360" src="//www.youtube.com/embed/wBCxsHLhV3c?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+probably add onclick events to these links to change the inner html of the above div instead of ddoing this weird inner loader thing.
+wonder if I can make it auto update based on the current feed from my youtube?
+
+
+<div id="smile">Smile</div>
+<div id="tower">Tower of Learning</div>
+
+<script type="text/javascript">
+
+
+$("#smile").onclick change()
+
+function change() {
+  $(".youtube-frame").html('<iframe id="what" width="640" height="360" src="//www.youtube.com/embed/6UXmt6iiMkQ?rel=0" frameborder="0" allowfullscreen></iframe>')
+}
+</script>
+

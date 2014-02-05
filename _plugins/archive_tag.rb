@@ -22,17 +22,22 @@ module Jekyll
         months.each_with_index do |m, idx|
           unless m.nil?
             posts = m
-            output += "<div class='archive_month'>#{Date::MONTHNAMES[posts[0].date.month]}</div>"
+            output += "<ul class='list'>"
+            output += "<li>"
+            output += "<hr><a>#{Date::MONTHNAMES[posts[0].date.month]}</a>"
             posts.each do |p|
               output += "<ul>"
               output += "<li class='archive_title'>"
               output += "<span class='archive_day'>#{p.date.day.to_s}</span>"
-              output += " <a href='#{p.url}'>#{p.data["title"]}</a></li>"
+              output += " <a href='#{p.url}'>#{p.data["title"]}</a>"
               output += "</ul>"
             end
+              output += "</li>"
           end
+              output += "</ul>"
         end
       end
+
       return output
     end
 
