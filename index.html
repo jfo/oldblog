@@ -6,7 +6,7 @@ title: jaf
 <div id="home">
 
 <!-- using the split filter -->
-{% for post in site.posts limit:5 %}
+{% for post in site.posts limit:50 %}
    <div class="post-preview">
    <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
    <hr>
@@ -21,4 +21,8 @@ title: jaf
    <BR>&nbsp;<BR>
    <BR>&nbsp;<BR>
 {% endfor %}
+
+<!-- <script type="text/javascript"> -->
+  <!-- $('.categories').html('Categories<hr><p>Programming</p><p>Music</p><p>Photography</p>') -->
+<!-- </script> -->
 

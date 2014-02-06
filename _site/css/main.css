@@ -14,9 +14,9 @@ html, body { height: 100%; }
 
 body {
   /* background-color: #FFF; */
-  background:url("/images/noisyold.png");
+  background:url("/images/noisy.png");
   background-repeat:repeat;
-  font-family: 'lato', 'lucida grande', 'Carme', sans-serif;
+  font-family: "Open Sans", 'lato', 'lucida grande', 'Carme', sans-serif;
   font-size: 85%;
   text-align: center;
 }
@@ -88,6 +88,12 @@ a:visited { color: #a0a; }
   /* position: fixed; */
 }
 
+.sidebar .categories {
+
+  text-align:center;
+  font-size:90%;
+}
+
 .sidebar ul {
   margin-left:3px;
 }
@@ -138,10 +144,11 @@ a {
 }
 
 .site {
+  /* background: rgba(255, 255, 255, 0.3); */
   font-size: 110%;
   text-align: justify;
   width: 44em;
-  margin: 3em auto 2em 1em;
+  margin: 1em auto 2em 1em;
   line-height: 1.5em;
   float: left;
 }
@@ -234,7 +241,7 @@ pre {
   border: 1px solid #ddd;
   background-color: #eef;
   background-color: #002b36;
-  padding: 0 .4em;
+  padding: 0 .3em;
 }
 
 ul, .post ol {
@@ -242,9 +249,14 @@ ul, .post ol {
 }
 
 code {
-  border: 1px solid #ddd;
+  border: 5px solid #002b36;
+  color:#93a1a1;
   background-color: #002b36;
-  padding: 0 .2em;
+}
+
+pre {
+  border: 3px solid #002b36;
+  color:#93a1a1;
 }
 
 pre code {
@@ -269,14 +281,22 @@ pre code {
 pre code .line::before {
     content: counter(line-numbering);
     counter-increment: line-numbering;
-    padding-right: 1em; /* space after numbers */
+    padding-right: 1.5em; /* space after numbers */
     width: 1.5em;
     text-align: right;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 #youtube-frame {
   width:640px;
   height:360px;
   overflow:scroll;
+}
+
+#photoset {
+  text-align: justify;
+  width: 60em;
+  height: 40em;
+  float: left;
+  overflow: visible;
 }
