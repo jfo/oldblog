@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <link href='http://fonts.googleapis.com/css?family=Carme' rel='stylesheet' type='text/css'>
+
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Portishead tribute "Live at Roseland" live at Le Poisson Rouge</title>
+        <meta name="viewport" content="width=device-width">
+
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntaxsol.css">
+
+    </head>
+    <body>
+
+        <div class="sidebar">
+          <a href="/about.html"> <img class="blur about" src="http://www.gravatar.com/avatar/78359dd9d3cf59abacfa85565edc1eb2?s=150" /></a>
+          <a href="/"> <img class="blur index" src="/images/compex.svg"/></a>
+          <div class='categories'></div>
+          <a href="/music.html"> <img class="blur music" src="/images/guitar.svg"/></a>
+          <a href="/photo.html"> <img class="blur photo" src="/images/cam.svg"/></a>
+
+       <BR>&nbsp;<BR>
+          <!-- this won't work on github pages but keeping it in for when I migrate to linode: -->
+          <!-- {  % render_archives site  %  } -->
+
+       <BR>&nbsp;<BR>
+       <BR>&nbsp;<BR>
+       <BR>&nbsp;<BR>
+        </div>
+
+        <div class="site">
+          <div class="header">
+          </div>
+
+          <h2 class="post-title" >Portishead tribute "Live at Roseland" live at Le Poisson Rouge</h2>
+<hr>
+<span class="post-date">July 26, 2013</span>
+
+<div class="post">
+<p style="text-align: left;">So this happened...</p>
+
+<p><a href="http://www.lepoissonrouge.com/lpr_events/a-tribute-to-portishead-roseland-nyc-live-july-24th-2013/">
+<img class="aligncenter" alt="" src="http://s3.amazonaws.com/lprnyc_wp/2013/06/PORTISHEAD-UPDATED.png" width="400px" /></a></p>
+
+<p>...and because I am an idiot, I neglected to find out that this show was LIVE streamed for free while we performed it, or to tell everyone about it. It was absolutely terrific to be able to play this great and intricate music with such a talented group of people, and big big big big goods to Brittany, who worked SO HARD on this and transcribed the entire record for like a gazillion instruments note for note. I am so sure she is sleeping better now.</p>
+
+<p>The good news is: it was definitely video&#39;d (expertly, from what I&#39;ve heard...) and I should be able to post excerpts pretty soon. Until then, here is a Youtube of the original performance in it&#39;s entirety :</p>
+
+<div class='videowrapper'><iframe src="//www.youtube.com/embed/ZFwnlCudeC0?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
+<p>I&#39;ve always liked this band... when I heard them in college it was just <em>so strange...</em> the harmonies weren&#39;t really that complex, although they were certainly sophisticated, but the harmonic motion was just really unconventional- it&#39;s amazing how hard it was for my ear to resolve parallel motion minor chords back then, and the textures were so sparse and delicate... the whole thing feels like funky dance music on downers, and what a great time!</p>
+
+<p>More on that later, maybe, for now I&#39;m sticking to my <a title="FILDI" href="http://www.youtube.com/watch?v=RYlCVwxoL_g" target="_blank">FILDI</a></p>
+
+</div>
+
+
+          <div class="footer">
+          <a href="/allposts.html"><p>See all posts</p></a>
+       <BR>&nbsp;<BR>
+       <BR>&nbsp;<BR>
+       <BR>&nbsp;<BR>
+          </div>
+
+      <script>
+
+        if (window.location.pathname=='/')
+          var thing = 'index';
+        else
+          var thing = window.location.pathname.match(/(\w+).html/)[1];
+
+        $('.' + thing).removeClass('blur')
+        function unblur() {
+          $(this).removeClass('blur');
+        };
+        function blur() {
+          $(this).addClass('blur');
+        };
+        $( "img.blur" ).hover(unblur, blur);
+
+        $('.list > li a').click(function() {
+              $(this).parent().find('ul').toggle();
+            });
+
+        jQuery("pre code").html(function(index, html) {
+            return html.replace(/^(.*)$/mg, "<span class=\"line\">$1</span>")
+        });
+
+      </script>
+    </body>
+</html>

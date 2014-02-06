@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <link href='http://fonts.googleapis.com/css?family=Carme' rel='stylesheet' type='text/css'>
+
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Derple Derp: the hot new social network</title>
+        <meta name="viewport" content="width=device-width">
+
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntaxsol.css">
+
+    </head>
+    <body>
+
+        <div class="sidebar">
+          <a href="/about.html"> <img class="blur about" src="http://www.gravatar.com/avatar/78359dd9d3cf59abacfa85565edc1eb2?s=150" /></a>
+          <a href="/"> <img class="blur index" src="/images/compex.svg"/></a>
+          <div class='categories'></div>
+          <a href="/music.html"> <img class="blur music" src="/images/guitar.svg"/></a>
+          <a href="/photo.html"> <img class="blur photo" src="/images/cam.svg"/></a>
+
+       <BR>&nbsp;<BR>
+          <!-- this won't work on github pages but keeping it in for when I migrate to linode: -->
+          <!-- {  % render_archives site  %  } -->
+
+       <BR>&nbsp;<BR>
+       <BR>&nbsp;<BR>
+       <BR>&nbsp;<BR>
+        </div>
+
+        <div class="site">
+          <div class="header">
+          </div>
+
+          <h2 class="post-title" >Derple Derp: the hot new social network</h2>
+<hr>
+<span class="post-date">November 12, 2013</span>
+
+<div class="post">
+<p>Have you heard of Derple Derp? It&#39;s the hottest new thing to hit the social networking scene.</p>
+
+<p>Not really.</p>
+
+<p>Really, it&#39;s the title I gave the <a href="http://ruby.railstutorial.org/" target="_blank">Hartl Rails Tutorial</a> Sample App on the version of it that I made so that it didn&#39;t say <strong>&quot;SAMPLE APP&quot; </strong>in huge, giant, letters on every page load while I was working in coffee shops or the <a href="http://www.wixlounge.com/" target="_blank">Wix lounge</a>. I decided to keep it that way... everything else is exactly the same as the canonical Sample.</p>
+
+<p>It was definitely a kick in the ass towards the end... I really should have studied up a little more on basic HTTP and maybe taken some looks through the <a href="http://guides.rubyonrails.org/" target="_blank">Rails Guides </a> before tackling it, but it was an immensely worthwhile thing to do. Not only do I have a general overview of a huge swath of rails&#39;s built in functionality, but it was just plain good practice jumping around directories and getting used to the structure of a good app- rails or otherwise. Test driven development was completely new to me, and I can totally see the benefit of goal driven workflows especially when you might be working with multiple people. Not so sure I like rspec much, though... but that just could be because I&#39;m not very good at it yet.</p>
+
+<p>In a way, the whole tutorial provide a sort of mirror to itself by illustrating a large &quot;goal&quot; to be pursued by a n00b dev. I have a much clearer picture in my mind of what the framework is capable of and generally how it goes about doing things, even if a lot of the specifics are a little bit foggy- and I have been using the guide as a reference if I want to try to implement something that I remember being covered in it.</p>
+
+<p><a href="https://derplederp.herokuapp.com/" target="_blank">You can see it here</a>- hell, you can even sign up for an account. It actually works.
+<p style="text-align: center;"><a href="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/11/Screen-Shot-2013-11-11-at-9.41.02-PM.png"><img class="wp-image-761 aligncenter" alt="Screen Shot 2013-11-11 at 9.41.02 PM" src="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/11/Screen-Shot-2013-11-11-at-9.41.02-PM.png" width="600" height="330" /></a></p>
+&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+</div>
+
+
+          <div class="footer">
+          <a href="/allposts.html"><p>See all posts</p></a>
+       <BR>&nbsp;<BR>
+       <BR>&nbsp;<BR>
+       <BR>&nbsp;<BR>
+          </div>
+
+      <script>
+
+        if (window.location.pathname=='/')
+          var thing = 'index';
+        else
+          var thing = window.location.pathname.match(/(\w+).html/)[1];
+
+        $('.' + thing).removeClass('blur')
+        function unblur() {
+          $(this).removeClass('blur');
+        };
+        function blur() {
+          $(this).addClass('blur');
+        };
+        $( "img.blur" ).hover(unblur, blur);
+
+        $('.list > li a').click(function() {
+              $(this).parent().find('ul').toggle();
+            });
+
+        jQuery("pre code").html(function(index, html) {
+            return html.replace(/^(.*)$/mg, "<span class=\"line\">$1</span>")
+        });
+
+      </script>
+    </body>
+</html>

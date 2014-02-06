@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <link href='http://fonts.googleapis.com/css?family=Carme' rel='stylesheet' type='text/css'>
+
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>V-I</title>
+        <meta name="viewport" content="width=device-width">
+
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntaxsol.css">
+
+    </head>
+    <body>
+
+        <div class="sidebar">
+          <a href="/about.html"> <img class="blur about" src="http://www.gravatar.com/avatar/78359dd9d3cf59abacfa85565edc1eb2?s=150" /></a>
+          <a href="/"> <img class="blur index" src="/images/compex.svg"/></a>
+          <div class='categories'></div>
+          <a href="/music.html"> <img class="blur music" src="/images/guitar.svg"/></a>
+          <a href="/photo.html"> <img class="blur photo" src="/images/cam.svg"/></a>
+
+       <BR>&nbsp;<BR>
+          <!-- this won't work on github pages but keeping it in for when I migrate to linode: -->
+          <!-- {  % render_archives site  %  } -->
+
+       <BR>&nbsp;<BR>
+       <BR>&nbsp;<BR>
+       <BR>&nbsp;<BR>
+        </div>
+
+        <div class="site">
+          <div class="header">
+          </div>
+
+          <h2 class="post-title" >V-I</h2>
+<hr>
+<span class="post-date">January 05, 2013</span>
+
+<div class="post">
+<p><div style="margin: 0 0 10px 0; padding: 0; font-size: 0.8em; line-height: 1.6em;"><br><a href="http://www.flickr.com/photos/monkeywithamirror/8349136416/" title="V-I"><img src="http://farm9.staticflickr.com/8053/8349136416_1310dd17b5.jpg" alt="V-I by a monkey with a mirror" /></a><br/><span style="margin: 0;"><a href="http://www.flickr.com/photos/monkeywithamirror/8349136416/">V-I</a>, a photo by <a href="http://www.flickr.com/photos/monkeywithamirror/">a monkey with a mirror</a> on Flickr.</span></div><p>This year&#39;s resolution.</p></p>
+
+</div>
+
+
+          <div class="footer">
+          <a href="/allposts.html"><p>See all posts</p></a>
+       <BR>&nbsp;<BR>
+       <BR>&nbsp;<BR>
+       <BR>&nbsp;<BR>
+          </div>
+
+      <script>
+
+        if (window.location.pathname=='/')
+          var thing = 'index';
+        else
+          var thing = window.location.pathname.match(/(\w+).html/)[1];
+
+        $('.' + thing).removeClass('blur')
+        function unblur() {
+          $(this).removeClass('blur');
+        };
+        function blur() {
+          $(this).addClass('blur');
+        };
+        $( "img.blur" ).hover(unblur, blur);
+
+        $('.list > li a').click(function() {
+              $(this).parent().find('ul').toggle();
+            });
+
+        jQuery("pre code").html(function(index, html) {
+            return html.replace(/^(.*)$/mg, "<span class=\"line\">$1</span>")
+        });
+
+      </script>
+    </body>
+</html>
