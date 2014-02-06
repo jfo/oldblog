@@ -1,13 +1,7 @@
 ---
 layout: post
-status: publish
-published: true
 title: V-I
 author: Jeff
-author_login: jeffowler
-author_email: jeffowler@gmail.com
-wordpress_id: 323
-wordpress_url: http://www.jeffalanfowler.com/?p=323
 date: 2013-01-05 03:07:16.000000000 -05:00
 categories:
 - Uncategorized
