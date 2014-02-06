@@ -1,24 +1,42 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "First!"
 date:   2014-01-13 23:02:36
-categories: jekyll update
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
-
-Jekyll also offers powerful support for code snippets:
+Ok. So. Here we go with this. Here is a test of some stuff. And now I'll drop in some ruby code 
 
 ```ruby
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+    @rows[0..2].each do |this|
+      this[0..2].each {|e| squares[0] << e}
+    end
+    @rows[0..2].each do |this|
+      this[3..5].each {|e| squares[1] << e}
+    end
+    @rows[0..2].each do |this|
+      this[6..8].each {|e| squares[2] << e}
+    end
+
+    @rows[3..5].each do |this|
+      this[0..2].each {|e| squares[3] << e}
+    end
+    @rows[3..5].each do |this|
+      this[3..5].each {|e| squares[4] << e}
+    end
+    @rows[3..5].each do |this|
+      this[6..8].each {|e| squares[5] << e}
+    end
+
+    @rows[6..8].each do |this|
+      this[0..2].each {|e| squares[6] << e}
+    end
+    @rows[6..8].each do |this|
+      this[3..5].each {|e| squares[7] << e}
+    end
+    @rows[6..8].each do |this|
+      this[6..8].each {|e| squares[8] << e}
+    end
 ```
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+is this going to look good? 

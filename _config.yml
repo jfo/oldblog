@@ -2,3 +2,4 @@ name: jaf.io
 markdown: redcarpet
 pygments: true
 # pagination: 5
+permalink: none
