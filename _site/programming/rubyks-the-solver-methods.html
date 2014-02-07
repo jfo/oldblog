@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+
       <script src="//code.jquery.com/jquery-1.10.2.js"></script>
       <link href='http://fonts.googleapis.com/css?family=Carme' rel='stylesheet' type='text/css'>
 
@@ -12,7 +13,7 @@
         <meta name="viewport" content="width=device-width">
 
 
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
         <!-- Custom CSS -->
@@ -23,7 +24,7 @@
 
     </head>
     <body>
-
+        <div class='sitebackground'></div>
         <div class="sidebar">
           <a href="/about.html"> <img class="blur about" src="http://www.gravatar.com/avatar/78359dd9d3cf59abacfa85565edc1eb2?s=150" /></a>
           <a href="/"> <img class="blur index" src="/images/compex.svg"/></a>
@@ -44,7 +45,8 @@
           <div class="header">
           </div>
 
-          <h2 class="post-title" >Rubyks, the solver methods</h2>
+                 <BR>&nbsp;<BR>
+<h2 class="post-title" >Rubyks, the solver methods</h2>
 <hr>
 <span class="post-date">November 12, 2013</span>
 
@@ -53,7 +55,7 @@
 <p style="text-align: center;"><img class="aligncenter" alt="" src="http://communities.ptc.com/servlet/JiveServlet/showImage/2-172419-27077/puzzles_rubiks_cube-13771.jpg" width="400" height="268" /></p>
 So now I have a software model of a rubik&#39;s cube. But how would I go about writing a program that can manipulate that model from any legal position and solve it?</p>
 
-<p><a id="more"></a><a id="more-779"></a></p>
+<!--break-->
 
 <p>This was also a major nerd snipe on myself, much like the fizzbuzz in brainfuck that ate up a full weekend a few weeks ago. At first, I figured that this was out of my paygrade-- so many better solvers have been written. I&#39;m not even that good of a cuber! I learned to solve it in college but only ever learned one method- it works every time but is not the most efficient solution by any means. I would have to learn new algorithms and strategies if I wanted to write a program that would work well. But then...</p>
 
@@ -157,11 +159,32 @@ Note that it always checks to see if the cube is ALREADY solved before mucking i
 
 <p>&nbsp;</p>
 
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'urthbound'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 </div>
 
 
           <div class="footer">
           <a href="/allposts.html"><p>See all posts</p></a>
+          <a href="mailto:jeffowler@gmail.com?Subject=Hello" target='_blank'><img src='/images/email.png' width='30'></a>
+          <a href="https://twitter.com/jeffowler" target='_blank'><img src='/images/twitter.png' width='30'></a>
        <BR>&nbsp;<BR>
        <BR>&nbsp;<BR>
        <BR>&nbsp;<BR>

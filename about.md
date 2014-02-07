@@ -3,6 +3,10 @@ layout: default
 title: about 
 ---
 
+About me
+========
+
+
 My name is Jeff Fowler.
 
 I am a musician, photographer, and programmer living in Brooklyn.

@@ -26,7 +26,7 @@ comments: []
 <p style="text-align: center;"><img class="aligncenter" alt="" src="http://www.memphisflyer.com/binary/db6e/1351792080-rubiks-cube-original.jpg" width="252" height="252" /></p>
 After writing the initial iteration of the <a title="&quot;The Chorder&quot; prototype" href="http://www.jeffalanfowler.com/blog/the-chorder-prototype/">chorder</a>, I started thinking about other systems that I might be able to model, and the rubiks cube seemed perfect. It is visual, easy to conceptualize, and completely contained- any possible combination can be arrived at by starting at the solved cube (the "base case") and shuffling. All I had to do was model the state of the cube in some sort of data structure and implement the various transformations accurately and the program would be accurate. Easy, right?!
 
-<a id="more"></a><a id="more-767"></a>
+<!--break-->
 
 And actually, it was pretty easy... not at first, necessarily- there was a fair amount of head scratching about how, exactly, I was going to store the state of the cube at any one time (I'm not convinced I picked the best method, either... but more on that later...)
 

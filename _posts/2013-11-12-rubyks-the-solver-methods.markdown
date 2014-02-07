@@ -23,7 +23,7 @@ comments: []
 <p style="text-align: center;"><img class="aligncenter" alt="" src="http://communities.ptc.com/servlet/JiveServlet/showImage/2-172419-27077/puzzles_rubiks_cube-13771.jpg" width="400" height="268" /></p>
 So now I have a software model of a rubik's cube. But how would I go about writing a program that can manipulate that model from any legal position and solve it?
 
-<a id="more"></a><a id="more-779"></a>
+<!--break-->
 
 This was also a major nerd snipe on myself, much like the fizzbuzz in brainfuck that ate up a full weekend a few weeks ago. At first, I figured that this was out of my paygrade-- so many better solvers have been written. I'm not even that good of a cuber! I learned to solve it in college but only ever learned one method- it works every time but is not the most efficient solution by any means. I would have to learn new algorithms and strategies if I wanted to write a program that would work well. But then...
 
