@@ -20,17 +20,6 @@ comments: []
 ---
 Jordan and I played another duo gig last weekend... here are some tracks.
 
-Bye Bye Blackbird:
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/133665300%3Fsecret_token%3Ds-ElAmr&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
 
-[audio mp3="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/11/blackbird.mp3"][/audio]
-
-Alice in Wonderland... a fantastic (and tragically underplayed!) waltz:
-
-[audio mp3="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/11/alice.mp3"][/audio]
-
-<a id="more"></a><a id="more-782"></a>
-
-I've only heard a Bill Evans cut of that from Live at the Village Vanguard-
-<iframe src="//www.youtube.com/embed/bSXRvgFea-0" height="480" width="640" allowfullscreen="" frameborder="0"></iframe>
-
-Fantastic.
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/133665182%3Fsecret_token%3Ds-OBrGf&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>

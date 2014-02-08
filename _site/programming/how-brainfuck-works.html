@@ -77,9 +77,8 @@ A &quot;bit&quot; is the <em>smallest possible piece </em>of information. It i
 
 <p>A &quot;byte&quot; is <em>eight</em> bits. In binary, eight digits provide you with 256 discrete values: 0-255 (0 counts as one of those). Any single byte can have a value anywhere in that range.</p>
 
-<p>Here, I&#39;ll count to 10 in binary:
-<code>
-0000 0000
+<p>Here, I&#39;ll count to 10 in binary:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">0000 0000
 0000 0001
 0000 0010
 0000 0011
@@ -89,8 +88,8 @@ A &quot;bit&quot; is the <em>smallest possible piece </em>of information. It i
 0000 0111
 0000 1000
 0000 1001
-</code>
-You might be able to intuit that if 0 looks like the top number, then 255 will look like &quot;1111 1111&quot;. Of course, there is no need to have all those leading zeroes, really, except to show that that would be the state of those bits in a byte of memory that was holding those values. We&#39;ll just use the decimal numbers for readability, but they can be represented either way and are equivalent. They could also be represented in hex...</p>
+</code></pre></div>
+<p>You might be able to intuit that if 0 looks like the top number, then 255 will look like &quot;1111 1111&quot;. Of course, there is no need to have all those leading zeroes, really, except to show that that would be the state of those bits in a byte of memory that was holding those values. We&#39;ll just use the decimal numbers for readability, but they can be represented either way and are equivalent. They could also be represented in hex...</p>
 
 <p>This is just like when you go from 0-9 in the ones place and then roll over back to 0 adding 1 to the tens place, except that maximum value in any single spot is &quot;1&quot;. I get it now! Base 2! Also this led to an AHA! moment concerning the<a href="http://www.javascripter.net/faq/rgbtohex.htm"> RGB hexcodes</a> that I have been looking at for years in Photoshop- they are simply three concatenated two-digit <a href="http://en.wikipedia.org/wiki/Hexadecimal">hexadecimal numbers! </a></p>
 
@@ -101,15 +100,18 @@ You might be able to intuit that if 0 looks like the top number, then 255 will l
 &gt;   moves the pointer to the right, increasing-ly.
 </code></pre></div>
 <p>Usually, the location of the pointer will &quot;roll over&quot; if it goes below 0 or above 30,000... (or above whatever the maximum number available is) effectively making the memory cells act like one long circular tape.</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">+   increments the value of the byte at the current slot
--   decrements the value of the byte at the current slot
-</code></pre></div>
-<p>So far so good. So here&#39;s a new brainfuck space, I&#39;ll only show 10 spots because I am not going to type 30,000:
+
+<p>c
 <code>
-[0] 0 0 0 0 0 0 0 0 0 0 ...
++   increments the value of the byte at the current slot
+-   decrements the value of the byte at the current slot
+</code></p>
+
+<p>So far so good. So here&#39;s a new brainfuck space, I&#39;ll only show 10 spots because I am not going to type 30,000:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">[0] 0 0 0 0 0 0 0 0 0 0 ...
  ^
-</code>
-Pointer starts at one; everything is zero. Now if we ran this code:</p>
+</code></pre></div>
+<p>Pointer starts at one; everything is zero. Now if we ran this code:</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">+++&gt;&gt;&gt;+&gt;--
 </code></pre></div>
 <p>The memory array would end up looking like this:</p>
@@ -144,12 +146,10 @@ Pointer starts at one; everything is zero. Now if we ran this code:</p>
 
 <p>Now the very first thing the program does is to move the pointer over just once to start from a fresh cell. Easy! Notice that the memory slots are all filling up with 33&#39;s as well. やった！</p>
 
-<p>But we have two more symbols, and they are the really good ones:
-<code>
-[       if the value of current cell is zero, skip to the matching bracket without executing the code.
+<p>But we have two more symbols, and they are the really good ones:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">[       if the value of current cell is zero, skip to the matching bracket without executing the code.
 ]       if the value of the current cell is NOT zero, go back to the opening bracket and execute the code again.
-</code></p>
-
+</code></pre></div>
 <p>OMG! LOORPS!</p>
 
 <p>The simplest loop in brainfuck is this one:</p>

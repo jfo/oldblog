@@ -59,6 +59,7 @@ A "bit" is the <em>smallest possible piece </em>of information. It is simply o
 A "byte" is <em>eight</em> bits. In binary, eight digits provide you with 256 discrete values: 0-255 (0 counts as one of those). Any single byte can have a value anywhere in that range.
 
 Here, I'll count to 10 in binary:
+
 ```
 0000 0000
 0000 0001
@@ -86,21 +87,25 @@ Now we can understand what the first four symbols do.
 
 Usually, the location of the pointer will "roll over" if it goes below 0 or above 30,000... (or above whatever the maximum number available is) effectively making the memory cells act like one long circular tape.
 
+c
 ```
 +   increments the value of the byte at the current slot
 -   decrements the value of the byte at the current slot
 ```
 
 So far so good. So here's a new brainfuck space, I'll only show 10 spots because I am not going to type 30,000:
+
 ```
 [0] 0 0 0 0 0 0 0 0 0 0 ...
  ^
 ```
+
 Pointer starts at one; everything is zero. Now if we ran this code:
 
 ```
 +++>>>+>--
 ```
+
 The memory array would end up looking like this:
 
 ```
@@ -142,6 +147,7 @@ Add a "&gt;" right at the top, before anything else.
 Now the very first thing the program does is to move the pointer over just once to start from a fresh cell. Easy! Notice that the memory slots are all filling up with 33's as well. やった！
 
 But we have two more symbols, and they are the really good ones:
+
 ```
 [       if the value of current cell is zero, skip to the matching bracket without executing the code.
 ]       if the value of the current cell is NOT zero, go back to the opening bracket and execute the code again.

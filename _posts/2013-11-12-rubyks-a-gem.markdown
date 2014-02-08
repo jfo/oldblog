@@ -4,35 +4,19 @@ status: publish
 published: true
 title: Rubyks, a gem
 author: Jeff
-author_login: jeffowler
-author_email: jeffowler@gmail.com
-excerpt: "<p style=\"text-align: center;\"><img class=\"aligncenter\" alt=\"\" src=\"http://www.memphisflyer.com/binary/db6e/1351792080-rubiks-cube-original.jpg\"
-  width=\"252\" height=\"252\" /></p>\r\nAfter writing the initial iteration of the
-  <a title=\"&quot;The Chorder&quot; prototype\" href=\"http://www.jeffalanfowler.com/blog/the-chorder-prototype/\">chorder</a>,
-  I started thinking about other systems that I might be able to model, and the rubiks
-  cube seemed perfect. It is visual, easy to conceptualize, and completely contained-
-  any possible combination can be arrived at by starting at the solved cube (the \"base
-  case\") and shuffling. All I had to do was model the state of the cube in some sort
-  of data structure and implement the various transformations accurately and the program
-  would be accurate. Easy, right?!\r\n\r\n"
-wordpress_id: 767
-wordpress_url: http://www.jeffalanfowler.com/blog/?p=767
 date: 2013-11-12 13:57:49.000000000 -05:00
 categories:
 - Programming
 tags: []
 comments: []
 ---
-<p style="text-align: center;"><img class="aligncenter" alt="" src="http://www.memphisflyer.com/binary/db6e/1351792080-rubiks-cube-original.jpg" width="252" height="252" /></p>
-After writing the initial iteration of the <a title="&quot;The Chorder&quot; prototype" href="http://www.jeffalanfowler.com/blog/the-chorder-prototype/">chorder</a>, I started thinking about other systems that I might be able to model, and the rubiks cube seemed perfect. It is visual, easy to conceptualize, and completely contained- any possible combination can be arrived at by starting at the solved cube (the "base case") and shuffling. All I had to do was model the state of the cube in some sort of data structure and implement the various transformations accurately and the program would be accurate. Easy, right?!
+After writing the initial iteration of the The Chorder, I started thinking about other systems that I might be able to model, and the rubiks cube seemed perfect. It is visual, easy to conceptualize, and completely contained- any possible combination can be arrived at by starting at the solved cube (the "base case") and shuffling. All I had to do was model the state of the cube in some sort of data structure and implement the various transformations accurately and the program would be accurate. Easy, right?!
 
 <!--break-->
 
 And actually, it was pretty easy... not at first, necessarily- there was a fair amount of head scratching about how, exactly, I was going to store the state of the cube at any one time (I'm not convinced I picked the best method, either... but more on that later...)
 
 I eventually settled on a two dimensional array containing 6 other arrays (one for each face of the whole cube) of 9 elements each (one for each square on each face.) More about the structure from the README:
-<blockquote>
-<pre style="white-space: pre-wrap;">The @cube attribute contains 6 arrays of 9 elements, each array describes one side of the cube like so:
 
     @cube[0] - top
     @cube[1] - left
@@ -59,13 +43,14 @@ If you created a new cube and then applied Cube#turn, the sides would appear lik
     5,3,0,1
         2
 
-But the address of the location of these sides would remain static. This is so that complex move combinations can be applied to a cube regardless of its orientation to the "viewer."</pre>
-</blockquote>
+But the address of the location of these sides would remain static. This is so that complex move combinations can be applied to a cube regardless of its orientation to the "viewer."
+
 This does have the advantage of offering a static "address" for each mini square on each face of the cube, but doesn't offer any scalability- I can't instantiate a cube of an arbitrary size (like Cube.new(n), for example) because the relationships between the different faces is defined in the methods that act upon them, and not in the data structure itself.
 
 After the data structure was designed, implementing the transformations was fairly straightforward. there are only 6 basic moves- each face can be turned clockwise once (turning a face counterclockwise is the same as turning it clockwise three times). here is the method for turning the top face clockwise once:
-<blockquote>
-<pre>def u
+
+```ruby
+def u
     cubetemp = Marshal.load(Marshal.dump(@cube))
 
     cubetemp[1][4] = @cube[4][2]
@@ -96,8 +81,10 @@ After the data structure was designed, implementing the transformations was fair
     @hist &lt;&lt; 'u'
     @cube = Marshal.load(Marshal.dump(cubetemp))
     self  
-  end</pre>
-</blockquote>
+  end
+```
+
+
 Simple- just reassigning all the colors based on how the cube is moving. Notice that, because I didn't understand deep copying of data, I used the (then magical) "Marshal" incantation to create a duplicate temporary array to operate on before I redumped the transformed state back into the main attribute. If I didn't do that, the color assignment would happen sequentially on the main data structure and it wouldn't be able to properly assign the new values.
 
 Marshal, by the way, is Ruby's serialization module... it takes any type of data and turns it into a simple byte stream. This was totally overkill. I should have just made a brand new deep copied array by using Array#dup, which does the same thing in a simpler, more secure way. Maybe I'll update that.

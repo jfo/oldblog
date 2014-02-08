@@ -15,17 +15,6 @@ categories:
 tags: []
 comments: []
 ---
-&nbsp;
 
-Someday My Prince Will Come
-
-[audio m4a="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/09/prince.m4a"][/audio]
-
-&nbsp;
-
-Anthropology
-
-[audio mp3="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/09/Anthropology.mp3"][/audio]
-
-&nbsp;
-<p style="text-align: center;"><a href="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/09/100_0474-2-e1378923536740.jpg"><img class="aligncenter  wp-image-504" alt="100_0474-2" src="http://www.jeffalanfowler.com/blog/wp-content/uploads/2013/09/100_0474-2-e1378923536740.jpg" width="540" height="405" /></a></p>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/133665167%3Fsecret_token%3Ds-laSUA&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/133665272%3Fsecret_token%3Ds-gRc2w&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=false"></iframe>
