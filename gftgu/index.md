@@ -1,3 +1,8 @@
+---
+layout: none
+title: Guitar from the Ground Up
+---
+
 This page is under scheduled maintanence and will be back up soon. Please check back in a few days!
 
 Thanks, 
