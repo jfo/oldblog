@@ -2,3 +2,8 @@ name: jaf.io
 markdown: redcarpet
 pygments: true
 permalink: none
+
+analytics :
+  provider : google
+  google:
+    tracking_id : 'UA-48051360-1'
