@@ -64,6 +64,90 @@
 
    <div class="post-preview">
        <BR>&nbsp;<BR>
+   <h2 class="post-title"><a href="/recursion.html">Recursion in 3 steps.</a></h2>
+   <hr>
+   <span class="post-date">February 27, 2014</span>
+   <p>Recursion is not as difficult a concept as people would have you believe when you first start out. Textbook definition says:</p>
+
+<blockquote>
+<p>Recursion in computer science is a method where the solution to a problem depends on solutions to smaller instances of the same problem (as opposed to iteration).</p>
+</blockquote>
+
+<p>Ok, great. If you&#39;re a beginner, that&#39;s not <strong>super</strong> helpful, and if you ask your grizzled old dev friends about it they are likely to either start yammering about how awesome recursion is from a to the metal on the stack implementation perspective or advise you to not worry about it. Either response maintains the mystery.</p>
+
+<p>So what is recursion? At a basic level, you are using recursion if you are calling a function from inside of itself. It makes more sense as a demonstration.</p>
+
+<p>Let&#39;s define a function that returns nothing (in Python, because why not):</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python"><span class="k">def</span> <span class="nf">myfunc</span><span class="p">():</span>
+    <span class="k">return</span> <span class="bp">None</span>
+</code></pre></div>
+<p>Now here is a function that does nothing but call itself:</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python"><span class="k">def</span> <span class="nf">myfunc</span><span class="p">():</span>
+    <span class="n">myfunc</span><span class="p">()</span>
+</code></pre></div>
+<p>Calling this will produce the following, almost immediately:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">RuntimeError: maximum recursion depth exceeded
+</code></pre></div>
+<p>So, we&#39;ve succeeding in making recursion occur, to no external effect. What&#39;s happening under the hood? The computer takes your instructions and dutifully executes them. Whenever you give it a new instruction (including as a subsection of the original instruction) it puts the original instruction aside to complete the new instruction. Once it completes the new instuction (and all sub instructions of that one, as well...) it picks up the original instruction and completes its steps.</p>
+
+<p>It is easy to imagine literally piling these nested instruction sets up on a table top- just you know, stacking them up. Stacking. Stack.</p>
+
+<p>Eventually you&#39;re going to run out of room- maybe you hit the ceiling, or something. Once you have no more space to set aside these instruction sets, you have run out of stack, and you will no longer be able to keep track of new nested instructions. You will have reached your maximum recursion depth.</p>
+
+<p>A recursive function MUST have a way to know when to stop calling itself. This is called a &quot;base case&quot; and it looks something like this... if we pass in a number and evaluate against that:</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python"><span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">some_number</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">some_number</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">&quot;Base case&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">myfunc</span><span class="p">(</span><span class="n">some_number</span><span class="p">)</span>
+</code></pre></div>
+<p>But here is the tricky part. Each new call to the function is passing in the same number. If we start at 0, it will not reach the recursive call. But if we do not start at 0, we have the same problem as before. Every time you call the function inside of itself, therfore, you want to change the value that you are passing into it.</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python"><span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">some_number</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">some_number</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">&quot;Base case&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">myfunc</span><span class="p">(</span><span class="n">some_number</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<p>This will cause the function calls to move towards the base case. Assuming you have enough space on your table to stack up all of those instructions, the variable will eventually reach 0 and propogate back through the stack of instructions that you had set aside.</p>
+
+<p>Astute readers, of course, may ask what would happen if you start from a negative number. Clearly, subtracting one will never reach 0. The function also needs a way to exit if it finds itelf pursuing a line of instructions that will never reach a base case...</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python"><span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">some_number</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">some_number</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">StandardError</span><span class="p">(</span><span class="s">&#39;Value will never reach base case&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">some_number</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&quot;Base case&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">myfunc</span><span class="p">(</span><span class="n">some_number</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<p>This function has &quot;knowledge&quot; about a situation that would cause it to enter an infinite recursive loop. It moves towards a base case and will eventually reach it, provided it has enough space to store the stack of instructions as it is executing them. What if it doesn&#39;t?</p>
+
+<p>If I call this function passing in 998, it works fine. 999, I will get a stack overflow. It still runs out of memory! The way different languages deal with this problem is dependant on the priorities and style of the language, and is beyond the scope of this simple post. Suffice to say that for many problem spaces, recursion can be overkill where iteration would work fine. Here is the same function iteratively:</p>
+<div class="highlight"><pre><code class="python language-python" data-lang="python"><span class="k">def</span> <span class="nf">myiter</span><span class="p">(</span><span class="n">some_number</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">some_number</span> <span class="o">&lt;</span> <span class="mi">0</span>
+      <span class="k">raise</span> <span class="ne">StandardError</span><span class="p">(</span><span class="s">&#39;This will subtract forever&#39;</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="n">some_number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">some_number</span> <span class="o">=</span> <span class="n">some_number</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">print</span> <span class="s">&quot;You made it!&quot;</span>
+</code></pre></div>
+<p>This does not have to keep track of how many instructions it has set aside. It simply mutates the given variable in the specified way until it reaches the condition set. Once again, we have caught numbers that would never reach 0 before they reach the loop... (errors cut off the code evaluation at the point at which they were raised.)</p>
+
+<p>Languages like Python and Ruby implicitly discourage recursiveness through their design decisions. Functional languages like Scheme and Clojure (from the lisp lineage) have built in optimizations to make recursion less brittle. Hilariously, a common technique is tail call optimization, which under certain circumstances turns a recursive function into an iterative one at the machine level.</p>
+
+<p>Recursion is powerful but can be conceptually difficult at first. But... for some problem spaces it is by far the best computational method. </p>
+
+<p>More on that later!</p>
+
+   
+   </div>
+   <BR>&nbsp;<BR>
+   <center>&bull;&bull;&bull;</center>
+   <BR>&nbsp;<BR>
+
+   <div class="post-preview">
+       <BR>&nbsp;<BR>
    <h2 class="post-title"><a href="/agig.html">A song</a></h2>
    <hr>
    <span class="post-date">February 25, 2014</span>
@@ -72,8 +156,6 @@
 <iframe width="640" height="360" src="//www.youtube.com/embed/BLNydDzz-JQ?rel=0" frameborder="0" allowfullscreen></iframe>
 
 <p>It was really, surprisingly great sounding in that little room, thanks in no small part to Eileen Goddard behind the sound board- which is totally weird because she light designed a bunch of shows I played for in college like one billion years ago, and I tend to run into randomly in the strangest places.</p>
-
-<p>Some code coming up, to.</p>
 
    
    </div>
@@ -184,33 +266,11 @@
 
    <div class="post-preview">
        <BR>&nbsp;<BR>
-   <h2 class="post-title"><a href="/uncategorized/some-more-tracks-from-jordans-and-my-duo.html">Some more tracks from Jordan's and my duo</a></h2>
+   <h2 class="post-title"><a href="/hard.html">change is hard</a></h2>
    <hr>
-   <span class="post-date">November 18, 2013</span>
-   <p>Jordan and I played another duo gig last weekend... here are some tracks.</p>
+   <span class="post-date">February 08, 2014</span>
+   <p>Change is difficult. It gets harder to change as you get older. We are ancience.</p>
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/133665300%3Fsecret_token%3Ds-ElAmr&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/133665182%3Fsecret_token%3Ds-OBrGf&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=true"></iframe>
-
-   
-   </div>
-   <BR>&nbsp;<BR>
-   <center>&bull;&bull;&bull;</center>
-   <BR>&nbsp;<BR>
-
-   <div class="post-preview">
-       <BR>&nbsp;<BR>
-   <h2 class="post-title"><a href="/programming/rubyks-the-solver-methods.html">Rubyks, the solver methods</a></h2>
-   <hr>
-   <span class="post-date">November 12, 2013</span>
-   <p>&nbsp;
-<p style="text-align: center;"><img class="aligncenter" alt="" src="http://communities.ptc.com/servlet/JiveServlet/showImage/2-172419-27077/puzzles_rubiks_cube-13771.jpg" width="400" height="268" /></p>
-So now I have a software model of a rubik&#39;s cube. But how would I go about writing a program that can manipulate that model from any legal position and solve it?</p>
-
-
-   
-      <a href="/programming/rubyks-the-solver-methods.html"  style="font-size: 70%; text-align: center;">more...</a>
    
    </div>
    <BR>&nbsp;<BR>
