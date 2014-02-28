@@ -121,7 +121,9 @@
 </code></pre></div>
 <p>This function has &quot;knowledge&quot; about a situation that would cause it to enter an infinite recursive loop. It moves towards a base case and will eventually reach it, provided it has enough space to store the stack of instructions as it is executing them. What if it doesn&#39;t?</p>
 
-<p>If I call this function passing in 998, it works fine. 999, I will get a stack overflow. It still runs out of memory! The way different languages deal with this problem is dependant on the priorities and style of the language, and is beyond the scope of this simple post. Suffice to say that for many problem spaces, recursion can be overkill where iteration would work fine. Here is the same function iteratively:</p>
+<p>If I call this function passing in 998, it works fine. 999, I will get a stack overflow. It still runs out of memory, at least in the particular python that I ran it in on my machine (memory allocation may differ depending on some other factors...)!</p>
+
+<p>The way different languages deal with this problem is dependant on the priorities and style of the language, and is beyond the scope of this simple post. Suffice to say that for many problem spaces, recursion can be overkill where iteration would work fine. Here is the same function iteratively:</p>
 <div class="highlight"><pre><code class="python language-python" data-lang="python"><span class="k">def</span> <span class="nf">myiter</span><span class="p">(</span><span class="n">some_number</span><span class="p">):</span>
 
     <span class="k">if</span> <span class="n">some_number</span> <span class="o">&lt;</span> <span class="mi">0</span>
@@ -136,7 +138,7 @@
 
 <p>Languages like Python and Ruby implicitly discourage recursiveness through their design decisions. Functional languages like Scheme and Clojure (from the lisp lineage) have built in optimizations to make recursion less brittle. Hilariously, a common technique is tail call optimization, which under certain circumstances turns a recursive function into an iterative one at the machine level.</p>
 
-<p>Recursion is powerful but can be conceptually difficult at first. But... for some problem spaces it is by far the best computational method. </p>
+<p>Recursion is powerful and can be conceptually difficult at first, but... for some problem spaces it is by far the best computational method.</p>
 
 <p>More on that later!</p>
 

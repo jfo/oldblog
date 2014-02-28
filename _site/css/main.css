@@ -295,18 +295,19 @@ pre.terminal code {
   background-color: #333;
 }
 
-pre code {
-    counter-reset: line-numbering;
-}
+/* line numbering; */
+/* pre code { */
+/*     counter-reset: line-numbering; */
+/* } */
 
-pre code .line::before {
-    content: counter(line-numbering);
-    counter-increment: line-numbering;
-    padding-right: 1.5em; /* space after numbers */
-    width: 3em;
-    text-align: right;
-    opacity: 0.3;
-}
+/* pre code .line::before { */
+/*     content: counter(line-numbering); */
+/*     counter-increment: line-numbering; */
+/*     padding-right: 1.5em; /1* space after numbers *1/ */
+/*     width: 3em; */
+/*     text-align: right; */
+/*     opacity: 0.3; */
+/* } */
 
 #youtube-frame {
   width:640px;

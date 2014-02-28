@@ -73,7 +73,9 @@ def myfunc(some_number):
 
 This function has "knowledge" about a situation that would cause it to enter an infinite recursive loop. It moves towards a base case and will eventually reach it, provided it has enough space to store the stack of instructions as it is executing them. What if it doesn't?
 
-If I call this function passing in 998, it works fine. 999, I will get a stack overflow. It still runs out of memory! The way different languages deal with this problem is dependant on the priorities and style of the language, and is beyond the scope of this simple post. Suffice to say that for many problem spaces, recursion can be overkill where iteration would work fine. Here is the same function iteratively:
+If I call this function passing in 998, it works fine. 999, I will get a stack overflow. It still runs out of memory, at least in the particular python that I ran it in on my machine (memory allocation may differ depending on some other factors...)!
+
+The way different languages deal with this problem is dependant on the priorities and style of the language, and is beyond the scope of this simple post. Suffice to say that for many problem spaces, recursion can be overkill where iteration would work fine. Here is the same function iteratively:
 
 ```python
 def myiter(some_number):
@@ -90,6 +92,6 @@ This does not have to keep track of how many instructions it has set aside. It s
 
 Languages like Python and Ruby implicitly discourage recursiveness through their design decisions. Functional languages like Scheme and Clojure (from the lisp lineage) have built in optimizations to make recursion less brittle. Hilariously, a common technique is tail call optimization, which under certain circumstances turns a recursive function into an iterative one at the machine level.
 
-Recursion is powerful but can be conceptually difficult at first. But... for some problem spaces it is by far the best computational method. 
+Recursion is powerful and can be conceptually difficult at first, but... for some problem spaces it is by far the best computational method.
 
 More on that later!
