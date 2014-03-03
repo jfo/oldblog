@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Recursion in 3 steps.
+comments: true
 ---
 
 Recursion is not as difficult a concept as people would have you believe when you first start out. Textbook definition says:
