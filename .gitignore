@@ -1,2 +1,2 @@
 # ignores generated site content. Check to see if this will work with github generating the compiled site on push
-_site/*
+/_site/
