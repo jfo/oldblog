@@ -76,18 +76,7 @@
         else
           var thing = window.location.pathname.match(/(\w+).html/)[1];
 
-        $('.' + thing).removeClass('blur')
-        function unblur() {
-          $(this).removeClass('blur');
-        };
-        function blur() {
-          $(this).addClass('blur');
-        };
-        $( "img.blur" ).hover(unblur, blur);
-
-        $('.list > li a').click(function() {
-              $(this).parent().find('ul').toggle();
-            });
+        $('.' + thing).addClass('activepage')
 
         jQuery("pre code").html(function(index, html) {
             return html.replace(/^(.*)$/mg, "<span class=\"line\">$1</span>")

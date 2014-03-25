@@ -17,10 +17,10 @@ body {
   /* background:url("/images/noisy.png"); */
   background-repeat:repeat;
   background-attachment: fixed;
-  /* font-family: "Open Sans", 'lato', 'lucida grande', 'Carme', sans-serif; */
+  font-family: "Open Sans", 'lato', 'lucida grande', 'Carme', sans-serif;
   /* font-family: Georgia, Cambria, 'Times New Roman', Times, serif; */
+  /* font-family: 'Sentinel SSm A', 'Sentinel SSm B', Georgia, serif; */
   /* font-family: "EB Garamond", serif; */
-  font-family: 'Sentinel SSm A', 'Sentinel SSm B', Georgia, serif;
   text-align: center;
 }
 
@@ -29,7 +29,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { margin-bottom: 1em; }
 
-p { margin: 1em 0; }
+p { 
+  margin: 1em 0; 
+  font-size: 18px;
+  line-height: 1.5em;
+}
 
 a         { color: #00a; }
 a:hover   { color: #000; }
@@ -46,27 +50,29 @@ a:visited { color: #a0a; }
   margin-bottom: 2em;
 }
 
-.post-preview  {
-  font-size: 100%;
-}
 
-.post  p {
-  font-size: 110%;
-}
+/* .post-preview  { */
+/*   font-size: 100%; */
+/* } */
 
-.posts li {
-  line-height: 1em;
-}
+/* .post  p { */
+/*   font-size: 110%; */
+/* } */
 
-.posts span {
-  color: #aaa;
-  font-size: 90%;
-}
+/* .posts li { */
+/*   line-height: 1em; */
+/* } */
+
+/* .posts span { */
+/*   color: #aaa; */
+/*   font-size: 90%; */
+/* } */
 
 /* preview split styles */
 
 .post-title {
-  /* font-family: "Open Sans", 'lato', 'lucida grande', 'Carme', sans-serif; */
+  font-family: "Open Sans", 'lato', 'lucida grande', 'Carme', sans-serif;
+  /* font-size: 2em; */
   text-decoration:none;
 }
 
@@ -149,6 +155,14 @@ a {
 .blur {
   -webkit-filter: blur(4px);
   transition: 1.8s;
+}
+
+.blur:hover {
+  -webkit-filter: blur(0px)
+}
+
+.blur.activepage {
+  -webkit-filter: blur(0px)
 }
 
 .sidebar img {
