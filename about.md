@@ -13,6 +13,8 @@ I am a musician, photographer, and programmer living in Brooklyn.
 
 I exist at these interweb locations:
 
+This is my old blog.
+
 
 
 <a href="mailto:jeffowler@gmail.com?Subject=Hello" target='_blank'><img src='/images/email.png' width='50'></a>
