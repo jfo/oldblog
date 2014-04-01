@@ -1,6 +1,6 @@
 ---
-layout: default 
-title: about 
+layout: default
+title: about
 ---
 
 About me
